@@ -1,0 +1,273 @@
+#topContainer {
+    background-image: url("/backgroundwhatsnew.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 0; /* Set the z-index for the background */
+    width: 100%;
+    height:fit-content; /* Adjust the height as needed */
+    text-align: center;
+    
+  }
+  .text h1{
+    color:rgb(219, 190, 63);
+    font-family:cursive;
+    font-size:60px;
+    font-style:italic;
+    font-weight:900;
+  }
+  /* top menu */
+  #nav-bar {
+    background-color:none;
+    position: relative;
+    z-index: 7;
+    display: flex;
+    padding-top: 20px;
+  }
+  #nav-bar img {
+    text-align: left;
+    width: 16%;
+    padding: 30px;
+  }
+   
+  #nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+  .nav-li {
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .Caption{
+    text-align: center;
+    color: whitesmoke;
+    font-style:unset ;
+    background-color: rgb(182, 37, 124);
+    padding:10px 10px;
+    margin-top:-41px;
+  }
+  body{
+    margin:0px 0px 0px;
+    width:100%;
+  }
+  .videoAndContent{
+    margin:40px 0px 40px 0px;
+    background-color: rgb(81, 6, 87);
+    display:flex;
+    height:500px;
+    
+  }
+  .video{
+    flex:1;
+    margin-bottom: 100px;
+
+  }
+  .content{
+    flex:1;
+    margin:53px 53px 10px 53px;
+    color:white;
+    font-size:20px;
+    text-align: center;
+    font-family:sans-serif;
+  }
+  .tobeBold{
+    font-weight: bolder;
+  }
+  .offerContainer{
+    display:flex;
+  }
+  .caption2{
+    font-size:larger;
+    padding-top:60px;
+    padding-bottom:60px;
+  }
+
+  #offerContainer{
+    display:flex;
+    margin-left:20px;
+    margin-right:0px;
+    padding-bottom:100px;
+    padding-left:130px;
+  }
+  .images{
+    margin-left:19px;
+    background-color: rgb(215, 163, 178);
+    height:286px;
+  }
+
+
+  /* footer */
+
+  @font-face {
+    font-family: Costa Text Regular;
+    src: url(https://www.costacoffee.in/static/CostaText-Regular-d819baeadd703ec19dd54fce7aba0a91.woff2)
+      format("woff2");
+  } .footer-productinfo {
+    height: 350px;
+    background-color: #b51144;
+    display: flex;
+  }
+  .footer-costacoffee {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  .footer-costacoffee a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  .footer-dietary-information {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  .footer-dietary-information a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  .footer-behindthebeans {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  .footer-behindthebeans a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  footer {
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    height: 275px;
+    background-color: #6d1f37;
+    font-family: "Costa Text Regular", sans-serif;
+    font-size: large;
+    flex-flow: wrap;
+    max-width: 1392px;
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footer-list {
+    margin-bottom: 50px;
+  }
+  .footer-list p {
+    margin-top: 50px;
+  }
+  footer ul {
+    list-style-type: none;
+    left: 0;
+  }
+  .social-list {
+    display: flex;
+    padding: 0;
+  }
+  .facebook-icon {
+    height: 30px;
+    margin-right: 20px;
+  }
+  .insta-icon {
+    height: 30px;
+    margin-right: 20px;
+  }
+  body {
+    background-color: white;
+    background-image: url(/wavy-background\ 1.png);
+    display: cover;
+    height: 90px;
+    width: 100%;
+  }
+
+
+/* cookie style */
+ 
+.round-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #6d1f37;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+ 
+.icon {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+ 
+#rotatedIcon {
+  display: none;
+  transform: rotate(45deg);
+}
+ 
+#cookieButton.open {
+  transform: rotate(45deg);
+}
+ 
+#cookieButton.open #normalIcon {
+  display: none;
+}
+ 
+#cookieButton.open #rotatedIcon {
+  display: block;
+}
+ 
+#cookieDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+ 
+.accept-button {
+  background-color: #6d1f37;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
