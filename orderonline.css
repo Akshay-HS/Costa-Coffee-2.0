@@ -1,0 +1,272 @@
+body {
+    background-color: white;
+    background-image: url(/wavy-background\ 1.png);
+    display: cover;
+    height: 90px;
+    width: 100%;
+  }
+#topContainer {
+    background-image: url("/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 0; /* Set the z-index for the background */
+    width: 100%;
+    height:fit-content; /* Adjust the height as needed */
+    
+  }
+  body{
+    margin:0px 0px 0px;
+    width:100%;
+  }
+  /* top menu */
+  #nav-bar {
+    background-color:none;
+    position: relative;
+    z-index: 7;
+    display: flex;
+    padding-top: 20px;
+  }
+  #nav-bar img {
+    text-align: left;
+    width: 16%;
+    padding: 30px;
+  }
+   
+  #nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+  .nav-li {
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .Containerdiv {
+    position: relative;
+    z-index: 1; /* Set the z-index for the content */
+    background-color: none; /* Add a background color for the content */
+    padding: 20px;
+    display:flex;
+    padding-top:20px;
+  }
+  
+.cup{
+    width:300px;
+    border-radius:50%;
+    margin-left:90px;
+    flex:1;
+}
+.div1{
+    color:white;
+    text-align: center;
+    flex:7;
+}  
+.orderOnline{
+    font-family:cursive;
+    font-size:50px;
+}
+.description{
+    font-weight: 600;
+}
+#websiteContainer,#websiteContainer1{
+    margin-left: 60px;
+    display:flex;
+}
+#nameAndLink,#nameAndLink1{
+    margin-top:70px;
+}
+#nameAndLink h2,a{
+    color:#6d1f37;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold
+}
+#nameAndLink1 h2,a{
+    color:#6d1f37;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold
+}
+#nameAndLink p{
+    font-size:21px;
+}
+#nameAndLink1 p{
+    font-size:21px;
+}
+#nameAndLink1 a:hover{
+ color:#38101c;
+}
+#nameAndLink a:hover{
+    color:#38101c;
+}
+
+/*  css for footer */
+@font-face {
+    font-family: Costa Text Regular;
+    src: url(https://www.costacoffee.in/static/CostaText-Regular-d819baeadd703ec19dd54fce7aba0a91.woff2)
+      format("woff2");
+  } .footer-productinfo {
+    height: 350px;
+    background-color: #b51144;
+    display: flex;
+  }
+  .footer-costacoffee {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  .footer-costacoffee a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  .footer-dietary-information {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  .footer-dietary-information a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  .footer-behindthebeans {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: xx-large;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  .footer-behindthebeans a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  footer {
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    height: 275px;
+    background-color: #6d1f37;
+    font-family: "Costa Text Regular", sans-serif;
+    font-size: large;
+    flex-flow: wrap;
+    max-width: 1392px;
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footer-list {
+    margin-bottom: 50px;
+  }
+  .footer-list p {
+    margin-top: 50px;
+  }
+  footer ul {
+    list-style-type: none;
+    left: 0;
+  }
+  .social-list {
+    display: flex;
+    padding: 0;
+  }
+  .facebook-icon {
+    height: 30px;
+    margin-right: 20px;
+  }
+  .insta-icon {
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  /* cookie style */
+ 
+.round-button {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: #6d1f37;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: transform 0.3s;
+  }
+   
+  .icon {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+  }
+   
+  #rotatedIcon {
+    display: none;
+    transform: rotate(45deg);
+  }
+   
+  #cookieButton.open {
+    transform: rotate(45deg);
+  }
+   
+  #cookieButton.open #normalIcon {
+    display: none;
+  }
+   
+  #cookieButton.open #rotatedIcon {
+    display: block;
+  }
+   
+  #cookieDialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    text-align: center;
+  }
+   
+  .accept-button {
+    background-color: #6d1f37;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+   
+
+  
+  
+  
