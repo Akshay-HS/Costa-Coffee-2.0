@@ -6,7 +6,7 @@ body {
     width: 100%;
   }
 #topContainer {
-    background-image: url("/background.jpg");
+    background-image: url("/Costa-Coffee/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

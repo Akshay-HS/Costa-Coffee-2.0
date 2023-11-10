@@ -1,5 +1,5 @@
 #topContainer {
-    background-image: url("/backgroundwhatsnew.jpg");
+    background-image: url("/Costa-Coffee/backgroundwhatsnew.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -201,7 +201,7 @@
   }
   body {
     background-color: white;
-    background-image: url(/wavy-background\ 1.png);
+    background-image: url(/Costa-Coffee/wavy-background\ 1.png);
     display: cover;
     height: 90px;
     width: 100%;
