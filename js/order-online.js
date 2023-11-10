@@ -18,7 +18,7 @@ div1.appendChild(description);
 const div2=document.createElement("div");
 div2.className="div2";
 const cupImg=document.createElement("img");
-cupImg.src = "cup (2).png";
+cupImg.src = "";
 cupImg.className="cup";
 div2.appendChild(cupImg);
 Containerdiv.appendChild(div1);
