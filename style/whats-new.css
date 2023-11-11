@@ -1,5 +1,5 @@
 #topContainer {
-    background-image: url("/Costa-Coffee/assets/backgroundwhatsnew.jpg");
+    background-image: url(/assets/backgroundwhatsnew.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10,6 +10,7 @@
     text-align: center;
     
   }
+  /* sip thr mithai */
   .text h1{
     color:rgb(219, 190, 63);
     font-family:cursive;
@@ -26,14 +27,21 @@
     padding-top: 20px;
   
   }
+  /* anchor tag */
+  #nav-bar li a{
+    text-decoration: none;
+    color:white;
+
+  }
   #nav-bar img {
     text-align: left;
     width: 50%;
-    margin-left: -60px;
     /* padding: 30px; */
   }
+  /* logo image */
   #nav-li-1 {
-    margin-left: 0px; 
+    margin-right:-70px;
+    margin-left:-140px;
   }
    
   #nav-list {
@@ -60,6 +68,7 @@
     margin:0px 0px 0px;
     width:100%;
   }
+  /* div which contains vedio and text */
   .videoAndContent{
     margin:40px 0px 40px 0px;
     background-color: rgb(81, 6, 87);
@@ -67,11 +76,13 @@
     height:500px;
     
   }
+
   .video{
     flex:1;
     margin-bottom: 100px;
 
   }
+  /* text */
   .content{
     flex:1;
     margin:53px 53px 10px 53px;
@@ -80,9 +91,11 @@
     text-align: center;
     font-family:sans-serif;
   }
+  /* span to emohasis certain words in text */
   .tobeBold{
     font-weight: bolder;
   }
+  /* container that contain image of products with offer */
   .offerContainer{
     display:flex;
   }
@@ -206,7 +219,7 @@
   }
   body {
     background-color: white;
-    background-image: url(/Costa-Coffee/wavy-background\ 1.png);
+    background-image: url(/assets/wavy-background\ 1.png);
     display: cover;
     height: 90px;
     width: 100%;

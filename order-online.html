@@ -4,28 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/Costa-Coffee/style/order-online.css" />
+    <link rel="stylesheet" href="/style/order-online.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <div>
+
     <div id="topContainer">
-        <div id="nav-bar">
-            <ul id="nav-list">
-              <li id="nav-li-1">
-                <a href="">
-                  <img src="/Costa-Coffee/assets/costa-coffee-logo.png" alt="costa-coffee-logo"
-                /></a>
-              </li>
-              <li class="nav-li">Our Story</li>
-              <li class="nav-li">Our menu</li>
-              <li class="nav-li">Costa Club</li>
-              <li class="nav-li">Order Online</li>
-              <li class="nav-li">Behind the Beans</li>
-              <li class="nav-li">Store Locator</li>
-              <li class="nav-li">What's New!</li>
-            </ul>
-          </div>
+      <!-- navbar -->
+      <div id="nav-bar">
+        <ul id="nav-list">
+          <li id="nav-li-1">
+            <a href="index.html">
+              <img src="/assets/costa-coffee-logo.png" alt="costa-coffee-log">
+            /></a>
+          </li>
+          <li class="nav-li"><a href="our-story.html">Our Story</a></li>
+          <li class="nav-li"><a href="our-menu.html">Our menu</a></li>
+          <li class="nav-li"><a href="">Costa Club</a></li>
+          <li class="nav-li"><a href="order-online.html">Order Online</a></li>
+          <li class="nav-li">
+            <a href="behind-the-beans.html">Behind the Beans</a>
+          </li>
+          <li class="nav-li">
+            <a href="store-locator.html" class="active">Store Locator</a>
+          </li>
+          <li class="nav-li"><a href="whats-new.html">What's New!</a></li>
+        </ul>
+      </div>
     </div>
+
+    <!-- image of website and link -->
+
     <div id="websiteContainer">
         <div id="imgContainer">
 
@@ -38,6 +49,8 @@
         </div>
     </div>
 
+
+
     <div id="websiteContainer1">
         <div id="imgContainer1">
 
@@ -49,11 +62,14 @@
             <i class='fas fa-angle-right' style='font-size:24px'></i>
         </div>
     </div>
-    
+
+
+
+    <!-- Form container for review -->
 
 
     <div class="reviewFormContainer">
-      <h1>Add a Review</h1>
+      <h1>ADD A REVIEW</h1>
       <form id="reviewForm">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -68,7 +84,7 @@
       </form>
     </div>
 
-
+      <!-- footer -->
     
     <section class="footer-productinfo">
         <div class="footer-costacoffee">
@@ -130,7 +146,11 @@
           </ul>
         </div>
       </footer>
+
+
       <!-- cookie icon -->
+
+
       <div id="cookieButton" class="round-button">
         <div id="normalIcon" class="icon">🍪</div>
         <div id="rotatedIcon" class="icon">❌</div>
@@ -140,6 +160,7 @@
         <p>We use cookies to improve your experience on our website.</p>
         <button id="acceptButton" class="accept-button">Accept</button>
       </div>
+    </div>
   </body>
-  <script src="/Costa-Coffee/orderonline.js"></script>
+  <script src="/js/order-online.js"></script>
 </html>

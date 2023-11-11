@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Costa-Coffee/style/whats-new.css">
-    <script src="/Costa-Coffee/js/whats-new.js"></script>
+    <link rel="stylesheet" href="/style/whats-new.css">
+    <script src="/js/whats-new.js"></script>
 </head>
 <body>
+  <div>
     <div id="topContainer">
+      <!-- nav bar -->
       <div id="nav-bar">
         <ul id="nav-list">
           <li id="nav-li-1">
-            <a href="">
-              <img src="/Costa-Coffee/assets/costa-coffee-logo.png" alt="costa-coffee-logo"
+            <a href="index.html">
+              <img src="/assets/costa-coffee-logo.png" alt="costa-coffee-logo"
             /></a>
           </li>
-          <li class="nav-li">Our Story</li>
-          <li class="nav-li">Our menu</li>
-          <li class="nav-li">Costa Club</li>
-          <li class="nav-li">Order Online</li>
-          <li class="nav-li">Behind the Beans</li>
-          <li class="nav-li">Store Locator</li>
-          <li class="nav-li">What's New!</li>
+          <li class="nav-li"><a href="our-story.html">Our Story</a></li>
+          <li class="nav-li"><a href="our-menu.html">Our menu</a></li>
+          <li class="nav-li"><a href="">Costa Club</a></li>
+          <li class="nav-li"><a href="order-online.html">Order Online</a></li>
+          <li class="nav-li">
+            <a href="behind-the-beans.html">Behind the Beans</a>
+          </li>
+          <li class="nav-li">
+            <a href="store-locator.html" class="active">Store Locator</a>
+          </li>
+          <li class="nav-li"><a href="whats-new.html">What's New!</a></li>
         </ul>
+        <!-- container for tag SIP THE MITHAI -->
       </div>
           <div class="text">
             <h1>SIP THE<br>MITHAI</h1>
@@ -32,12 +39,14 @@
     <div class="Caption">
         <h1>LET'S GET BREWING NEW TRADITIONS</h1>
     </div>
+    <!-- contains vedio -->
     <div class="videoAndContent">
         <div class="video">
             <video class="videoPlay" width="650" height="500" autoplay muted loop>
-                <source src="/Costa-Coffee/assets/videozip.mp4" type="video/mp4">
+                <source src="/assets/videozip.mp4" type="video/mp4">
             </video>
         </div>
+        <!-- contains text -->
         <div class="content">
         <p>
             This festive season, we've teamed up with <br>none other than the celebrated culinary wizard <br> <span class="tobeBold">Shivesh Bhatia</span> to brew a new range of festive<br> drinks inspired by traditional Indian sweets  - <br>the <span class="tobeBold">Blisstachio Rose drinks.</span><br>
@@ -45,9 +54,11 @@
         </p>
         </div>
     </div>
+    <!-- container for images of products with offer -->
     <div id="camptionAndOfferContainer">
         <h4 class="caption2" style="text-align: center;">BUY 1 BLISSTACHIO ROSE DRINK AND GET 2 BEANS IN THE COSTA CLUB INDIA APP.</h4>
         <div id="offerContainer">
+          <!-- container for each images -->
             <div id="offer1">
 
             </div>
@@ -61,7 +72,7 @@
     </div>
 
 
-
+    <!-- footer -->
 
     <section class="footer-productinfo">
         <div class="footer-costacoffee">
@@ -123,6 +134,8 @@
           </ul>
         </div>
       </footer>
+
+      <!-- cokkie -->
       <div id="cookieButton" class="round-button">
         <div id="normalIcon" class="icon">🍪</div>
         <div id="rotatedIcon" class="icon">❌</div>
@@ -132,5 +145,6 @@
         <p>We use cookies to improve your experience on our website.</p>
         <button id="acceptButton" class="accept-button">Accept</button>
       </div>
+    </div>
 </body>
 </html>
