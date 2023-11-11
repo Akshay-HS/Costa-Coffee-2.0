@@ -1,32 +1,42 @@
 body {
     background-color: white;
-    background-image: url(/Costa-Coffee/assets/wavy-background\ 1.png);
+    background-image: url(/assets/wavy-background\ 1.png);
     display: cover;
     height: 90px;
     width: 100%;
   }
+/* topcontainer which contain order online and discription */
 #topContainer {
-    background-image: url("/Costa-Coffee/assets/background.jpg");
+    background-image: url(/assets/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     z-index: 0; /* Set the z-index for the background */
     width: 100%;
-    height:fit-content; /* Adjust the height as needed */
-    
+    height:fit-content; 
+    margin-top:-20px;
   }
+
   body{
     margin:0px 0px 0px;
     width:100%;
+    height: 90px;
   }
+
   /* top menu */
+
   #nav-bar {
     background-color:none;
     position: relative;
     z-index: 7;
     display: flex;
     padding-top: 20px;
+  }
+  #nav-bar li a{
+    text-decoration: none;
+    color: #ccc;
+
   }
   #nav-bar img {
     text-align: left;
@@ -53,7 +63,7 @@ body {
   .Containerdiv {
     position: relative;
     z-index: 1; /* Set the z-index for the content */
-    background-color: none; /* Add a background color for the content */
+    background-color: none; 
     padding: 20px;
     display:flex;
     padding-top:20px;
@@ -117,6 +127,7 @@ body {
 .reviewFormContainer{
  text-align:center;
  padding:60px 70px;
+ background-color:rgb(219, 221, 218);
 }
 
 form {
@@ -125,6 +136,7 @@ form {
   border: 1px solid #ccc;
   margin-left:auto;
   margin-right:auto;
+  background-color:rgb(162, 220, 151);
 }
 
 label {

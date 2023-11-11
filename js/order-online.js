@@ -1,28 +1,32 @@
 const topContainer=document.getElementById("topContainer");
 
 
-const Containerdiv=document.createElement("div");// div which contain 
+const Containerdiv=document.createElement("div");// div which contain description and image
 Containerdiv.className="Containerdiv";
 
 const div1=document.createElement("div");
-div1.className="div1";
+div1.className="div1";//containes heading and paragraph
 const orderOnline=document.createElement("h1");
 orderOnline.textContent="Order Online";
 orderOnline.className="orderOnline"
 const description=document.createElement("p");
 description.textContent="Get freshly brewed coffee, delicious snacks and sweet treats delivered to your homes."
 description.className="description"
+//appending order online and discription to div1
+
 div1.appendChild(orderOnline);
 div1.appendChild(description);
 
-const div2=document.createElement("div");
+const div2=document.createElement("div");//container for image
 div2.className="div2";
 const cupImg=document.createElement("img");
-cupImg.src = "";
+cupImg.src = "/assets/cup (2).png";
 cupImg.className="cup";
 div2.appendChild(cupImg);
+//appending div1 and div2 to topContainer
 Containerdiv.appendChild(div1);
 Containerdiv.appendChild(div2);
+//appending topContainer to Containerdiv
 topContainer.appendChild(Containerdiv);
 
 //website and link
@@ -47,6 +51,8 @@ fetch("https://dummyjson.com/users/")
   .catch((error) => {
     console.error("Error fetching data: ", error);
   });
+
+  // js for cookies
   document.addEventListener("DOMContentLoaded", function () {
     const cookieButton = document.getElementById("cookieButton");
     const acceptButton = document.getElementById("acceptButton");
