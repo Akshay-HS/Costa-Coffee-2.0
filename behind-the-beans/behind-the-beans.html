@@ -10,78 +10,177 @@
     <link rel="stylesheet" href="behind-the-beans.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container-fluid p-0 m-0 mt-0 pt-0">
+      <nav class="navbar navbar-expand-lg navbar-light p-0 m-0 mt-0 pt-0">
+        <div id="top" class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav p-sm-1">
-            <li class="nav-item mr-3 ml-3">
-              <a class="navbar-brand" href="#">
-                <img
-                  src="assets/images/costa-coffee-logo.png"
-                  alt="Costa Coffee Logo"
-                  height="60"
-                />
-              </a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Our Story</a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Our Menu</a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Costa Club</a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Order Online</a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Behind the Beans</a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Store Locator</a>
-            </li>
-            <li class="nav-item mr-3">
-              <a class="nav-link" href="#">What's New</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav p-sm-1">
+              <li class="nav-item mr-3 ml-3">
+                <a class="navbar-brand" href="#">
+                  <img
+                    src="assets/images/costa-coffee-logo.png"
+                    alt="Costa Coffee Logo"
+                    height="60"
+                  />
+                </a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Our Story</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Our Menu</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Costa Club</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Order Online</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Behind the Beans</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">Store Locator</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a class="nav-link" href="#">What's New</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-      <div class="row m-0 top-div">
+      </nav>
+      <div id="back" class="row m-0 top-div mt-0 pt-0">
         <div class="col-md-6 left-column">
-          <div class="left-column-content">
-            <h3>Left Column with Gradient</h3>
-            <p>
-              This column contains a gradient background and some additional
-              color.
-            </p>
+          <div class="left-column-content text-center">
+            <h1 id="nav-background-heading" class="fw-bold text-uppercase"></h1>
+            <p id="nav-background-paragraph"></p>
           </div>
         </div>
         <div
           class="col-md-6 right-column"
-          style="background-image: url('assets/images/nav_bg.jpg')"
+          id="nav-background-image"
+          style="background-image: url('')"
         ></div>
       </div>
+    </div>
+    <div id="beans-navbar" class="bg-danger position-absolute w-100 mt-0 p-3">
+      <ul
+        id="beans-nav-list"
+        class="list-unstyled d-flex justify-content-between ps-5 mb-3"
+      >
+        <li class="beans-nav-li">
+          <a
+            class="nav-a text-white text-uppercase p-5 h5 text-decoration-none"
+            id="nutrition-a"
+            href="#"
+            >Nutrition and well-being</a
+          >
+        </li>
+        <li class="beans-nav-li">
+          <a
+            class="nav-a text-white text-uppercase p-5 h5 text-decoration-none"
+            id="costa-foundation-a"
+            href="#"
+            >Costa Foundation</a
+          >
+        </li>
+        <li class="beans-nav-li">
+          <a
+            class="nav-a text-white text-uppercase p-5 h5 text-decoration-none"
+            id="responsible-a"
+            href="#"
+            >Responsible Sourcing</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- footer -->
+    <div id="container"></div>
+    <div id="footer-all" class="container-fluid">
+      <div class="row footer-productinfo">
+        <div class="col-md-2 footer-costacoffee sm-1">
+          <h5>Costa Coffee</h5>
+          <a href="#" class="text-white">Our coffees</a>
+          <a href="#" class="text-white">Help and advice</a>
+          <a href="#" class="text-white">Costa Club</a>
+          <a href="#" class="text-white">How to guides</a>
+          <a href="#" class="text-white">FAQs</a>
+        </div>
+        <div class="col-md-2 footer-dietary-information sm-1">
+          <h5>Dietary Information</h5>
+          <a href="#" class="text-white">Detailed dietary information</a>
+        </div>
+        <div class="col-md-2 footer-behindthebeans sm-1">
+          <h5>Behind the beans</h5>
+          <a href="#" class="text-white">Behind the Beans</a>
+          <a href="#" class="text-white">Costa Foundation</a>
+          <a href="#" class="text-white">Responsible sourcing</a>
+        </div>
+      </div>
+
+      <footer class="row">
+        <div class="col-md-6">
+          <div class="footer-list">
+            <a href="#" class="text-white">Policies and terms of use</a>
+            <p>© 2023 Costa Coffee. All rights reserved.</p>
+          </div>
+          <ul class="social-list list-unstyled">
+            <li class="d-inline-block">
+              <a
+                href="https://www.facebook.com/Costa-Coffee-%C3%96sterreich-110726417922322/"
+                class="facebook-link"
+              >
+                <img
+                  src="https://images.ctfassets.net/27hc2gu70btq/2iIP38op14DbdRhkJLoPNf/8b6d1847cf089e5fc70160c32fca4c22/facebook.svg"
+                  alt="Costa Coffee Facebook"
+                  class="facebook-icon img-fluid"
+                />
+              </a>
+            </li>
+            <li class="d-inline-block insta-link">
+              <a
+                href="https://www.instagram.com/costacoffeeindia/?hl=en"
+                class=""
+              >
+                <img
+                  src="https://images.ctfassets.net/27hc2gu70btq/5UXzVzRq89VGA3cbidkkX0/9c01113e991a4728bedfd07aba5907af/instagram.svg"
+                  alt="Costa Coffee Instagram"
+                  class="insta-icon img-fluid"
+                />
+              </a>
+            </li>
+            <li class="d-inline-block twitter-link">
+              <a href="https://twitter.com/CostaCoffeeInd" class="">
+                <img
+                  src="https://images.ctfassets.net/27hc2gu70btq/7vOx07c0sEUaDeGsMF26Wz/8a720c59ff98fdbd97411107c288c546/twitter.png"
+                  alt="Twitter"
+                  class="twitter-icon img-fluid"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <!-- Bootstrap JS and dependencies (optional) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--Additional JS  -->
+    <script src="js/behind-the-beans.js"></script>
   </body>
 </html>
