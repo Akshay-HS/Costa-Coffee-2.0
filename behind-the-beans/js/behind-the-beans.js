@@ -51,7 +51,7 @@ function createMainContainer() {
     "d-flex",
     "flex-column",
     "align-items-center",
-    "py-5"
+    // "py-5"
   );
 
   const fetchRandomImage = () => {
@@ -87,7 +87,7 @@ function createMainContainer() {
 
     if (randomImageURL && randomText) {
       const mainDiv = document.createElement("div");
-      mainDiv.classList.add("row", "mt-5", "w-100");
+      mainDiv.classList.add("row", "mt-5", "w-100","container-fluid");
       mainDiv.id = "mainDiv";
 
       const leftDiv = document.createElement("div");
@@ -98,7 +98,8 @@ function createMainContainer() {
         "d-flex",
         "flex-column",
         "align-items-center",
-        "w-100"
+        "w-100",
+        "col-sm-6"
       );
 
       const rightDiv = document.createElement("div");
@@ -109,7 +110,8 @@ function createMainContainer() {
         "d-flex",
         "flex-column",
         "align-items-center",
-        "w-100"
+        "w-100",
+        "col-sm-6"
       );
 
       if (index % 2 == 0) {

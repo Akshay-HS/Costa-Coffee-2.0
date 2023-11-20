@@ -19,6 +19,9 @@
   font-size: larger;
 }
 
+#container {
+  margin-top: 7vh;
+}
 .left-column {
   height: 80vh; /* Adjust the height as needed */
   background-color: rgb(138, 93, 101);
@@ -31,6 +34,7 @@
 #mainDiv {
   padding-left: 0%;
   padding-right: 0%;
+  /* margin-top: 30%; */
 }
 
 .left-column-content {
@@ -135,12 +139,6 @@ footer a {
   text-decoration: none;
   color: #ffffff;
 }
-.footer-list {
-  /* margin-bottom: 50px; */
-}
-.footer-list p {
-  /* margin-top: 50px; */
-}
 footer ul {
   list-style-type: none;
   /* left: 0; */
@@ -161,4 +159,171 @@ footer ul {
   font-weight: bold;
   font-size: larger;
   color: black !important;
+}
+
+.second-div {
+  background-color: rgb(188, 7, 7) !important;
+}
+/* Specific styling for the second navbar */
+.second-div .navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-div .navbar-nav .nav-item {
+  margin-right: 20px; /* Adjust the spacing between items as needed */
+}
+
+.second-div .nav-item:last-child {
+  margin-right: 0; /* Remove margin-right for the last item */
+}
+
+.second-div .nav-link:hover {
+  color: black; /* Change text color to black on hover */
+}
+
+/* Fix for the burger option not working (needs Bootstrap JS) */
+/* ... (Bootstrap JS should be correctly linked in the HTML) */
+
+/* cookie style */
+
+.round-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #6d1f37;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+#rotatedIcon {
+  display: none;
+  transform: rotate(45deg);
+}
+
+#cookieButton.open {
+  transform: rotate(45deg);
+}
+
+#cookieButton.open #normalIcon {
+  display: none;
+}
+
+#cookieButton.open #rotatedIcon {
+  display: block;
+}
+
+#cookieDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+
+.accept-button {
+  background-color: #6d1f37;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Nutrition adn well being */
+/* Style of Nutrition and well being */
+
+#nutrition-h1 {
+  text-align: center;
+  color: #6d1f37;
+  /* margin-top: %; */
+}
+
+#nutrition-p1 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%; */
+  margin-top: 4%;
+}
+#nutrition-p2 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%; */
+  margin-top: 4%;
+}
+#nutrition-img1 {
+  height: 500px;
+  /* margin-bottom: 20px; */
+  /* margin-top: -100px; */
+  width: 100%;
+}
+#nutrition-p3 {
+  font-size: larger;
+  font-weight: 600;
+  width: 53%;
+  /* margin-left: 24%; */
+  /* margin-top: -150px; */
+  color: orange;
+  /* margin-bottom: 50px; */
+}
+#nutrition-h2 {
+  /* margin-left: 24%; */
+  color: #6d1f37;
+}
+#nutrition-p4 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%; */
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+#nutrition-div1 {
+  display: flex;
+  /* margin-top: 150px; */
+  /* margin-left: 100px; */
+  margin-bottom: 100px;
+}
+#nutrition-img2 {
+  flex: 1;
+  width: 240px;
+  height: 200px;
+  /* margin-bottom: 200px; */
+}
+#nutrition-div2 {
+  flex: 2;
+  /* margin-left: 0px; */
+  width: 40%;
+  padding-left: 40px;
+}
+#nutrition-h3 {
+  color: #6d1f37;
+  font-weight: 700;
+}
+#nutrition-a1 {
+  color: #6d1f37;
+  font-weight: 700;
 }
