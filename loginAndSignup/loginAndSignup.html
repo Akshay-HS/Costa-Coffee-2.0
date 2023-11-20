@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Signup Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="loginAndSignup.css" />
+  </head>
+  <body>
+    <div class="container-fluid mt-md-5">
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="assets/images/costa-coffee-logo.png"
+            alt="Costa Coffee Logo"
+            height="50"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 form-container">
+          <!-- Login Form -->
+          <div id="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="login-email"
+                  placeholder="Enter email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="login-password"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="mt-3">
+              Don't have an account?
+              <a href="#" onclick="toggleForm()">Signup here</a>
+            </p>
+          </div>
+
+          <!-- Signup Form (Initially hidden) -->
+          <div id="signup-form" style="display: none">
+            <h2>Signup</h2>
+            <form id="signupForm">
+              <div class="form-group">
+                <label for="signup-name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signup-name"
+                  placeholder="Enter name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signup-email"
+                  placeholder="Enter email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signup-password"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn">Signup</button>
+            </form>
+            <p class="mt-3">
+              Already have an account?
+              <a href="#" onclick="toggleForm()">Login here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/loginAndSignup.js"></script>
+    <!-- Link to the JavaScript file -->
+  </body>
+</html>

@@ -49,7 +49,9 @@
                 <a class="nav-link" href="#">Order Online</a>
               </li>
               <li class="nav-item mr-3">
-                <a class="nav-link" href="#">Behind the Beans</a>
+                <a class="nav-link" href="behind-the-beans.html"
+                  >Behind the Beans</a
+                >
               </li>
               <li class="nav-item mr-3">
                 <a class="nav-link" href="#">Store Locator</a>
@@ -62,52 +64,67 @@
         </div>
       </nav>
       <div id="back" class="row m-0 top-div mt-0 pt-0">
-        <div class="col-md-6 left-column">
+        <div class="col-md-6 left-column col-sm-6">
           <div class="left-column-content text-center">
             <h1 id="nav-background-heading" class="fw-bold text-uppercase"></h1>
             <p id="nav-background-paragraph"></p>
           </div>
         </div>
         <div
-          class="col-md-6 right-column"
+          class="col-md-6 right-column col-sm-6"
           id="nav-background-image"
           style="background-image: url('')"
         ></div>
       </div>
     </div>
-    <div id="beans-navbar" class="bg-danger position-absolute w-100 mt-0 p-3">
-      <ul
-        id="beans-nav-list"
-        class="list-unstyled d-flex justify-content-between ps-5 mb-3"
+    <!-- ... (previous HTML code) ... -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger second-div">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#secondNavbarSupportedContent"
+        aria-controls="secondNavbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <li class="beans-nav-li">
-          <a
-            class="nav-a text-white text-uppercase p-5 h5 text-decoration-none"
-            id="nutrition-a"
-            href="#"
-            >Nutrition and well-being</a
-          >
-        </li>
-        <li class="beans-nav-li">
-          <a
-            class="nav-a text-white text-uppercase p-5 h5 text-decoration-none"
-            id="costa-foundation-a"
-            href="#"
-            >Costa Foundation</a
-          >
-        </li>
-        <li class="beans-nav-li">
-          <a
-            class="nav-a text-white text-uppercase p-5 h5 text-decoration-none"
-            id="responsible-a"
-            href="#"
-            >Responsible Sourcing</a
-          >
-        </li>
-      </ul>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="secondNavbarSupportedContent"
+      >
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="nutrition-a" href=""
+              >Nutrition and Well-being</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Costa Foundation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Responsible Sourcing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- cookie icon -->
+    <div id="cookieButton" class="round-button">
+      <div id="normalIcon" class="icon">🍪</div>
+      <div id="rotatedIcon" class="icon">❌</div>
     </div>
-    <!-- footer -->
+    <div id="cookieDialog" class="cookie-dialog">
+      <h1>Cookie Consent</h1>
+      <p>We use cookies to improve your experience on our website.</p>
+      <button id="acceptButton" class="accept-button">Accept</button>
+    </div>
+    <!-- ... (remaining HTML code) ... -->
+
     <div id="container"></div>
+    <!-- footer -->
     <div id="footer-all" class="container-fluid">
       <div class="row footer-productinfo">
         <div class="col-md-2 footer-costacoffee sm-1">
@@ -182,5 +199,9 @@
 
     <!--Additional JS  -->
     <script src="js/behind-the-beans.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/costa-foundation.js"></script>
+    <script src="js/responsible.js"></script>
+    <script src="js/nutrition.js"></script>
   </body>
 </html>
