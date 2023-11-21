@@ -24,8 +24,8 @@ function createCostaFoundationContent() {
 
 function costaNewContent(container) {
   // Create and append content specific to Costa Foundation
-  const headingNav = document.getElementById("headingNav");
-  headingNav.textContent = "Costa Foundation";
+  // const headingNav = document.getElementById("headingNav");
+  // headingNav.textContent = "Costa Foundation";
   const h1 = document.createElement("h1");
   h1.id = "costa-foundation-h1";
   h1.textContent = "Building schools and futures";
@@ -37,7 +37,7 @@ function costaNewContent(container) {
   container.appendChild(p1);
   const img1 = document.createElement("img");
   img1.id = "foundation-img1";
-  img1.src = "assets/costa-foundation-img.jpg";
+  img1.src = "assets/images/costa-foundation-img.jpg";
   container.appendChild(img1);
   const p2 = document.createElement("p");
   p2.id = "foundation-p2";
@@ -61,7 +61,7 @@ function costaNewContent(container) {
   container.appendChild(button2);
   const img2 = document.createElement("img");
   img2.id = "foundation-globe";
-  img2.src = "assets/globe.png";
+  img2.src = "assets/images/globe.png";
   container.appendChild(img2);
   const p3 = document.createElement("p");
   p3.id = "nutrition-p3";
@@ -101,7 +101,7 @@ function costaNewContent(container) {
 
   // Create an image element and set its source
   const image = document.createElement("img");
-  image.src = "assets/costa-foundation-student.png"; // Set the image source as needed
+  image.src = "assets/images/costa-foundation-student.png"; // Set the image source as needed
   rightDiv.appendChild(image);
 
   // Append the left and right divs to the main div
