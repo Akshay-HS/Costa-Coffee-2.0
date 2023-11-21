@@ -101,6 +101,30 @@
               <a href="#" onclick="toggleForm()">Login here</a>
             </p>
           </div>
+          <div class="row m-3 justify-content-around">
+            Sign in / Log in with
+          </div>
+          <div class="row">
+            <div class="col-md-5 col-sm-4">
+              <!-- Use Bootstrap button classes and a Google icon for the button -->
+              <button class="btn" id="googleLoginButton">Google</button>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <button class="btn" id="mobileLoginform">Mobile</button>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+              <!-- Use Bootstrap button classes for styling -->
+              <button class="btn" id="anonnLoginButton">Anonymously</button>
+            </div>
+            <!-- <div id="phoneNumberForm" style="display: none">
+              <input
+                type="text"
+                id="phoneNumberInput"
+                placeholder="Enter your phone number"
+              /><button id="mobileLoginButton">Login</button>
+            </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -111,6 +135,11 @@
         getAuth,
         createUserWithEmailAndPassword,
         signInWithEmailAndPassword,
+        GoogleAuthProvider,
+        signInWithPopup,
+        RecaptchaVerifier,
+        signInWithPhoneNumber,
+        signInAnonymously,
       } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
       import {
         getDatabase,
@@ -137,6 +166,9 @@
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
       const db = getDatabase();
+      const provider = new GoogleAuthProvider();
+
+      // Signup
 
       const signup = () => {
         const email = document.getElementById("signup-email").value;
@@ -167,6 +199,7 @@
           });
       };
       document.getElementById("signupButton").addEventListener("click", signup);
+
       const login = () => {
         const email = document.getElementById("login-email").value;
         const password = document.getElementById("login-password").value;
@@ -175,10 +208,10 @@
           .then((userCredential) => {
             // Signed in successfully
             const user = userCredential.user;
-            alert("Login successful!");
+            // alert("Login successful!");
             // You can perform actions after successful login, e.g., redirect to another page
             console.log("User logged in:", user);
-            window.location.href = "about.html";
+            window.location.href = "../behind-the-beans/behind-the-beans.html";
           })
           .catch((error) => {
             // Handle errors during login
@@ -196,6 +229,90 @@
           event.preventDefault(); // Prevent default form submission
           login(); // Call the login function when the form is submitted
         });
+
+      const googleLogin = () => {
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+            window.location.href = "../behind-the-beans/behind-the-beans.html";
+            // ...
+          })
+          .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+          });
+      };
+      document
+        .getElementById("googleLoginButton")
+        .addEventListener("click", googleLogin);
+
+      const anonLogin = () => {
+        signInAnonymously(auth)
+          .then(() => {
+            window.location.href = "../behind-the-beans/behind-the-beans.html";
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ...
+          });
+      };
+      document
+        .getElementById("anonnLoginButton")
+        .addEventListener("click", anonLogin);
+      // document
+      //   .getElementById("mobileLoginform")
+      //   .addEventListener("click", function () {
+      //     document.getElementById("phoneNumberForm").style.display = "block";
+      //   });
+
+      // function getPhoneNumberFromUserInput() {
+      //   return document.getElementById("phoneNumberInput").value;
+      // }
+
+      // const mobileLogin = () => {
+      //   const phoneNumber = getPhoneNumberFromUserInput(); // Function to retrieve phone number
+
+      //   // Create RecaptchaVerifier
+      //   window.recaptchaVerifier = new RecaptchaVerifier(
+      //     auth,
+      //     "mobileLoginButton",
+      //     {
+      //       size: "invisible",
+      //       callback: (response) => {
+      //         // reCAPTCHA solved, allow signInWithPhoneNumber.
+      //         signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier)
+      //           .then((confirmationResult) => {
+      //             // SMS sent. Prompt user to type the code from the message.
+      //             window.confirmationResult = confirmationResult;
+      //             // Handle the confirmation result
+      //           })
+      //           .catch((error) => {
+      //             // Error handling for signInWithPhoneNumber
+      //             console.error("Error:", error);
+      //           });
+      //       },
+      //     }
+      //   );
+
+      //   recaptchaVerifier.render().then((widgetId) => {
+      //     // The RecaptchaVerifier is rendered, possibly handle further actions
+      //   });
+      // };
+      // document
+      //   .getElementById("mobileLoginButton")
+      //   .addEventListener("click", mobileLogin);
     </script>
 
     <!-- Bootstrap JS -->
