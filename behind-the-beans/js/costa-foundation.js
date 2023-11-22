@@ -45,6 +45,7 @@ function costaNewContent(container) {
     "The mission of the Costa Foundation is to fund schools and school projects in coffee-growing communities which provide the opportunity to access a safe, quality education. The charity does this by:";
   container.appendChild(p2);
   const button1 = document.createElement("button");
+
   button1.id = "costa-foundation-button1";
   button1.href = "";
   button1.textContent = "Donations ➤";
@@ -76,6 +77,15 @@ function costaNewContent(container) {
   // Create the left div
   const leftDiv = document.createElement("div");
   leftDiv.classList.add("foundation-left-div");
+  leftDiv.classList.add(
+    "col-md-6",
+    "text-center",
+    "d-flex",
+    "flex-column",
+    "align-items-center",
+    "w-100",
+    "col-sm-6"
+  );
 
   // Apply a background color to the left div (e.g., red)
   // leftDiv.style.backgroundColor = "aqua";
@@ -93,6 +103,7 @@ function costaNewContent(container) {
   leftDiv.appendChild(p);
   const button = document.createElement("button");
   button.className = "learn-button";
+  button.className = "btn btn-light my-3";
   button.textContent = "Learn More ➤";
   leftDiv.appendChild(button);
   // Create the right div
