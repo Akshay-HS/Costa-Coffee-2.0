@@ -105,25 +105,43 @@
             Sign in / Log in with
           </div>
           <div class="row">
-            <div class="col-md-5 col-sm-4">
+            <div class="col-md-6 col-sm-4  text-center">
               <!-- Use Bootstrap button classes and a Google icon for the button -->
               <button class="btn" id="googleLoginButton">Google</button>
             </div>
-            <div class="col-md-4 col-sm-4">
-              <button class="btn" id="mobileLoginform">Mobile</button>
-            </div>
+            
 
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-6 col-sm-3  text-center">
               <!-- Use Bootstrap button classes for styling -->
               <button class="btn" id="anonnLoginButton">Anonymously</button>
             </div>
-            <!-- <div id="phoneNumberForm" style="display: none">
-              <input
-                type="text"
-                id="phoneNumberInput"
-                placeholder="Enter your phone number"
-              /><button id="mobileLoginButton">Login</button>
-            </div> -->
+            <div class="row m-3">
+              <div class="col-md-12 col-sm-6 m-2">
+                <input
+                  type="tel"
+                  id="mobileNumber"
+                  placeholder="Mobile number"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-12 col-sm-12 text-center">
+                <button class="btn" id="mobileLoginButton">Mobile</button>
+              </div>
+              <div class="col-md-12 col-sm-6 m-2">
+                <input
+                  type="tel"
+                  id="otp"
+                  placeholder="OTP"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-12 text-center">
+                <button class="btn ms-5" id="otpSubmmitButton">
+                  Submit OTP
+                </button>
+              </div>
+              <div id="recaptcha-container"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -271,48 +289,51 @@
       document
         .getElementById("anonnLoginButton")
         .addEventListener("click", anonLogin);
-      // document
-      //   .getElementById("mobileLoginform")
-      //   .addEventListener("click", function () {
-      //     document.getElementById("phoneNumberForm").style.display = "block";
-      //   });
+      const mobileLogin = () => {
+        window.recaptchaVerifier = new RecaptchaVerifier(
+          auth,
+          "recaptcha-container",
+          {
+            size: "invisible",
+            callback: function (response) {
+              submitPhoneNumberAuth();
+            },
+          }
+        );
+        var phoneNumber = document.getElementById("mobileNumber").value;
+        var appVerifier = window.recaptchaVerifier;
 
-      // function getPhoneNumberFromUserInput() {
-      //   return document.getElementById("phoneNumberInput").value;
-      // }
+        signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+          .then(function (confirmationResult) {
+            window.confirmationResult = confirmationResult;
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      };
+      function submitPhoneNumberAuthCode() {
+        var code = document.getElementById("otp").value;
+        confirmationResult
+          .confirm(code)
+          .then(function (result) {
+            var user = result.user;
+            //console.log(user);
 
-      // const mobileLogin = () => {
-      //   const phoneNumber = getPhoneNumberFromUserInput(); // Function to retrieve phone number
+            // window.AppInventor.setWebViewString(JSON.stringify(user));
+            window.location.href = "../behind-the-beans/behind-the-beans.html";
+          })
+          .catch(function (error) {
+            console.log(error);
+            alert("Wrong OTP")
+          });
+      }
 
-      //   // Create RecaptchaVerifier
-      //   window.recaptchaVerifier = new RecaptchaVerifier(
-      //     auth,
-      //     "mobileLoginButton",
-      //     {
-      //       size: "invisible",
-      //       callback: (response) => {
-      //         // reCAPTCHA solved, allow signInWithPhoneNumber.
-      //         signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier)
-      //           .then((confirmationResult) => {
-      //             // SMS sent. Prompt user to type the code from the message.
-      //             window.confirmationResult = confirmationResult;
-      //             // Handle the confirmation result
-      //           })
-      //           .catch((error) => {
-      //             // Error handling for signInWithPhoneNumber
-      //             console.error("Error:", error);
-      //           });
-      //       },
-      //     }
-      //   );
-
-      //   recaptchaVerifier.render().then((widgetId) => {
-      //     // The RecaptchaVerifier is rendered, possibly handle further actions
-      //   });
-      // };
-      // document
-      //   .getElementById("mobileLoginButton")
-      //   .addEventListener("click", mobileLogin);
+      document
+        .getElementById("mobileLoginButton")
+        .addEventListener("click", mobileLogin);
+      document
+        .getElementById("otpSubmmitButton")
+        .addEventListener("click", submitPhoneNumberAuthCode);
     </script>
 
     <!-- Bootstrap JS -->

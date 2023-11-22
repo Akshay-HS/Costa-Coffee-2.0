@@ -22,8 +22,8 @@ function createresponsibleContent() {
 
 function responsibleNewContent(container) {
   // Create and append content specific to Costa Foundation
-  const headingNav = document.getElementById("headingNav");
-  headingNav.textContent = "Responsible Sourcing";
+  // const headingNav = document.getElementById("headingNav");
+  // headingNav.textContent = "Responsible Sourcing";
   //
   // Create the main div
   const mainDiv = document.createElement("div");
@@ -33,6 +33,15 @@ function responsibleNewContent(container) {
   // Create the left div
   const leftDiv = document.createElement("div");
   leftDiv.classList.add("responsible-left-div");
+  leftDiv.classList.add(
+    "col-md-6",
+    "text-center",
+    "d-flex",
+    "flex-column",
+    "align-items-center",
+    "w-100",
+    "col-sm-6"
+  );
 
   // Apply a background color to the left div (e.g., red)
   // leftDiv.style.backgroundColor = "aqua";
@@ -47,6 +56,7 @@ function responsibleNewContent(container) {
   p.id = "responsible-div-p";
   p.textContent =
     "We have a responsibility to ensure sound social, ethical and environmental practices within our supply chains. That’s why we are committed to carrying out all our procurement practices in the most sustainable and responsible way possible.By working with our suppliers and sustainable practice experts, we have developed and implemented policies for human rights in the supply chain.";
+
   leftDiv.appendChild(p);
 
   // Create the right div
@@ -55,7 +65,7 @@ function responsibleNewContent(container) {
 
   // Create an image element and set its source
   const image = document.createElement("img");
-  image.src = "assets/responsibleImg.png"; // Set the image source as needed
+  image.src = "assets/images/responsibleImg.png"; // Set the image source as needed
   rightDiv.appendChild(image);
 
   // Append the left and right divs to the main div
@@ -96,7 +106,6 @@ function responsibleNewContent(container) {
   p5.textContent =
     "We don’t tolerate any form of slavery, forced labour or human trafficking – within our own business, across the operations of our franchisees and business partners, suppliers and wider supply chain.";
   container.appendChild(p5);
-  
 
   // You can add more content here as needed
 }
