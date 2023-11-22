@@ -19,38 +19,41 @@ div1.appendChild(description);
 
 const div2=document.createElement("div");//container for image
 div2.className="div2";
-const cupImg=document.createElement("img");
+/*const cupImg=document.createElement("img");
 cupImg.src = "/assets/cup (2).png";
 cupImg.className="cup";
-div2.appendChild(cupImg);
+div2.appendChild(cupImg);*/
 //appending div1 and div2 to topContainer
 Containerdiv.appendChild(div1);
-Containerdiv.appendChild(div2);
+   //Containerdiv.appendChild(div2);
 //appending topContainer to Containerdiv
 topContainer.appendChild(Containerdiv);
 
 //website and link
-fetch("https://dummyjson.com/users/")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data)
-    const users = data.users;
-    const websiteContainer=document.getElementById("imgContainer");
-    //container for img
-    const websiteimg=document.createElement("img");
-    websiteimg.src=users[0].image;
-    websiteContainer.appendChild(websiteimg);// adding image to container
+async function fetchData() {
+  try {
+    const response = await fetch("https://dummyjson.com/users/");
+    const data = await response.json();
+    console.log(data);
 
-    const websiteContainer1=document.getElementById("imgContainer1");
-    //container for img
-    const websiteimg1=document.createElement("img");
-    websiteimg1.src=users[1].image;
-    websiteContainer1.appendChild(websiteimg1);// adding image to container
-    
-  })
-  .catch((error) => {
+    const users = data.users;
+    const websiteContainer = document.getElementById("imgContainer");
+    const websiteContainer1 = document.getElementById("imgContainer1");
+
+    const websiteimg = document.createElement("img");
+    websiteimg.src = users[0].image;
+    websiteContainer.appendChild(websiteimg);
+
+    const websiteimg1 = document.createElement("img");
+    websiteimg1.src = users[1].image;
+    websiteContainer1.appendChild(websiteimg1);
+  } catch (error) {
     console.error("Error fetching data: ", error);
-  });
+  }
+}
+
+fetchData();
+
 
   // js for cookies
   document.addEventListener("DOMContentLoaded", function () {
@@ -87,6 +90,29 @@ fetch("https://dummyjson.com/users/")
     // Add a click event handler to the cookie button
     cookieButton.addEventListener("click", toggleButtonState);
   });
+
+
+
+
+  //form
+
+  
+  const scriptURL = "https://script.google.com/macros/s/AKfycbywDYy3n6UghCQ15DMRMaP1bvk7n4ufP32PF37BLSXdZ1igpW3wbK89zRn761niGsie/exec";
+ 
+  const form = document.forms["review_form"];
+   
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) =>
+        alert("Thank you! your form is submitted successfully.")
+      )
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
+   
   
 
 

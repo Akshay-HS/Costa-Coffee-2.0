@@ -1,20 +1,25 @@
-fetch("https://dummyjson.com/users/")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data)
- const users = data.users;
- 
- 
+async function fetchData() {
+  try {
+    const response = await fetch("https://dummyjson.com/users/");
+    const data = await response.json();
+    console.log(data);
+    const users = data.users;
 
-    for(let i=1;i<4;i++){
-    const ran=Math.floor(Math.random() * 20);
-    const offerContainer=document.getElementById(`offer${i}`);
-    const img1=document.createElement("img");
-    img1.src=users[ran].image;
-    img1.className="images";
-    offerContainer.appendChild(img1);
+    for (let i = 1; i < 4; i++) {
+      const ran = Math.floor(Math.random() * 20);
+      const offerContainer = document.getElementById(`offer${i}`);
+      const img1 = document.createElement("img");
+      img1.src = users[ran].image;
+      img1.className = "images";
+      offerContainer.appendChild(img1);
     }
-})
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+  }
+}
+
+fetchData();
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const cookieButton = document.getElementById("cookieButton");
