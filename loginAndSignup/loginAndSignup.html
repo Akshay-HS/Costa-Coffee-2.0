@@ -105,15 +105,19 @@
             Sign in / Log in with
           </div>
           <div class="row">
-            <div class="col-md-6 col-sm-4  text-center">
+            <div class="col-md-6 col-sm-4 text-center">
               <!-- Use Bootstrap button classes and a Google icon for the button -->
               <button class="btn" id="googleLoginButton">Google</button>
             </div>
-            
 
-            <div class="col-md-6 col-sm-3  text-center">
+            <div class="col-md-6 col-sm-3 text-center">
               <!-- Use Bootstrap button classes for styling -->
               <button class="btn" id="anonnLoginButton">Anonymously</button>
+            </div>
+            <div class="col-md-12 col-sm-12 text-center">
+              <div class="row m-3 justify-content-around">
+                Sign in / Log in with Mobile
+              </div>
             </div>
             <div class="row m-3">
               <div class="col-md-12 col-sm-6 m-2">
@@ -125,7 +129,7 @@
                 />
               </div>
               <div class="col-md-12 col-sm-12 text-center">
-                <button class="btn" id="mobileLoginButton">Mobile</button>
+                <button class="btn" id="mobileLoginButton">Send OTP</button>
               </div>
               <div class="col-md-12 col-sm-6 m-2">
                 <input
@@ -324,7 +328,7 @@
           })
           .catch(function (error) {
             console.log(error);
-            alert("Wrong OTP")
+            alert("Wrong OTP");
           });
       }
 
