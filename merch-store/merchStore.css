@@ -30,5 +30,21 @@ body {
 }
 
 #product {
-  margin-top: 20%;
+  margin-top: 20vh !important;
+}
+/* Styling for the card and hover effect */
+.game-card-y-hover {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.game-card-y-hover:hover {
+  transform: translateY(-10px); /* Moves the card up by 5 pixels on hover */
+}
+
+#productHead
+{
+  margin-top: 20vh !important;
+  color: white;
+  font-weight: bolder;
 }

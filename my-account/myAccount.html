@@ -40,93 +40,95 @@
               <a class="nav-link" href="#">Our Story</a>
             </li>
             <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Our Menu</a>
+              <a class="nav-link" href="../ourmenu/our-menu.html">Our Menu</a>
             </li>
-
+           
             <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Order Online</a>
+              <a class="nav-link" href="../order-online/order-online.html">Order Online</a>
             </li>
             <li class="nav-item mr-3">
-              <a
-                class="nav-link"
-                href="../behind-the-beans/behind-the-beans.html"
+              <a class="nav-link" href="../behind-the-beans/behind-the-beans.html"
                 >Behind the Beans</a
               >
             </li>
             <li class="nav-item mr-3">
-              <a class="nav-link" href="#">Store Locator</a>
+              <a class="nav-link" href="../Store_Locator_Page/store-locator.html">Store Locator</a>
             </li>
             <li class="nav-item mr-3">
-              <a class="nav-link" href="#">What's New</a>
+              <a class="nav-link" href="../whats-new/whats-new.html">What's New</a>
             </li>
             <li class="nav-item mr-3">
-              <a class="nav-link" href="../my-account/myAccount.html"
-                >My Account</a
-              >
+              <a class="nav-link" href="../my-account/myAccount.html">My Account</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container m-5 font-weight-bolder" id="myAccountMain">
+    <div class="container m-5 font-weight-bolder justify-content-start" id="myAccountMain">
       <div class="row justify-content-center">
         <div class="col-md-8 justify-content-center">
-          <h2
-            class="d-flex justify-content-center align-items-center font-weight-bolder"
-          >
-            My Account Information
-          </h2>
-
-          <!-- Displayed image moved below account information heading -->
-          <div class="d-flex justify-content-center align-items-center">
-            <img
-              src="assets/images/accountprofile.png"
-              id="selectedImage"
-              alt="Selected Image"
-              class="profile-img mt-3"
-              style="display: none"
-            />
+          <div class="game-card-left">
+            <h2 class="d-flex justify-content-center align-items-center font-weight-bolder">
+              My Account Information
+            </h2>
+    
+            <!-- Displayed image moved below account information heading -->
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                src="assets/images/accountprofile.png"
+                id="selectedImage"
+                alt="Selected Image"
+                class="profile-img mt-3"
+                style="display: none"
+              />
+            </div>
+    
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" readonly />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" readonly />
+            </div>
+    
+            <div class="row justify-content-center">
+              <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <button onclick="handleImageUpload()" class="btn">
+                  Select Image
+                </button>
+                <div class="form-group mt-3">
+                  <!-- File input moved below the Select Image button -->
+                  <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    style="display: none"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <button onclick="logout()" class="btn btn-danger mt-3">Logout</button>
+              </div>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" readonly />
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" readonly />
-          </div>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <button onclick="handleImageUpload()" class="btn">
-            Select Image
-          </button>
-          <div class="form-group mt-3">
-            <!-- File input moved below the Select Image button -->
-            <input
-              type="file"
-              id="imageInput"
-              accept="image/*"
-              style="display: none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <button onclick="logout()" class="btn btn-danger mt-3">Logout</button>
         </div>
       </div>
     </div>
+    
+    
+    
     <div class="row justify-content-center">
-      <div class="col-md-4 d-flex justify-content-center align-items-center">
-        <h3 class="mr-3">Go to our merch shop</h3>
+      <div class="col-md-4 d-flex justify-content-center align-items-center game-card-right">
+        <h2 class="d-flex justify-content-center align-items-center font-weight-bolder mr-3" style="color: white;">
+          Check Out Our
+        </h2>
         <button id="merchStoreButton" class="btn">Merch Store</button>
       </div>
     </div>
+  </div>
 
     <!-- your script tags remain unchanged -->
 
