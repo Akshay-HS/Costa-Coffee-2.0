@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       container.innerHTML = ""; // Clear the contents of maincontainer
       drink_container.innerHTML="";
     }
+
    
   //Code to print the food items in the menu ends
     function food() {
