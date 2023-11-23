@@ -115,10 +115,15 @@ j++;
       foodContainer2.appendChild(row2);
       j++;
         }
-      
-      
-    }
-      )}
+        const allergenLink = document.createElement("a");
+        allergenLink.classList.add("btn", "btn-allergens");
+        allergenLink.textContent = "*Click here to know the allergen information";
+        allergenLink.href = "assets/allergens.pdf"; 
+        allergenLink.target = "_blank"; // Open link in a new tab
+        mainContainer.appendChild(allergenLink); 
+    })
+
+  }
  //Code to print the food items in the menu ends
 
 
@@ -179,7 +184,7 @@ j++;
          leftContainer2.classList.add('col-md-6');
    
          const drinksName2 = document.createElement('h2');
-         //const ran2 = Math.floor(Math.random() * 25);
+         
          drinksName2.textContent = data[j].item_name;
          leftContainer2.appendChild(drinksName2);
      
