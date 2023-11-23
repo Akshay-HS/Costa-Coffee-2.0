@@ -1,0 +1,168 @@
+body {
+  background-image: url(/assets/wavy-background.png);
+}
+
+.px-custom {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+/* NavBar */
+
+/* nav {
+  background-color: transparent;
+  z-index: 50;
+}
+#logo img {
+  margin-top: 20px;
+  width: 200px;
+}
+
+.show {
+  z-index: 10;
+}
+
+#navbarSupportedContent {
+  margin-top: 0px;
+}
+
+#nav-bar-list li {
+  font-size: larger;
+  font-weight: bolder;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: white;
+} */
+
+
+.navbar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent !important;
+}
+ 
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Set a higher z-index */
+}
+ 
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.video-div {
+  position: absolute;
+  top: 0%;
+}
+.video-container {
+  width: 100%;
+}
+
+/* BODY CONTAINER */
+.whole-body-container {
+  margin-top: 45%;
+}
+
+#explore-button {
+  padding: 18px 27px;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 28px;
+  background-color: #6d1f37;
+  color: white;
+  border: none;
+  border-radius: 32px;
+  transition: all 0.3s ease;
+  /* width: 320px; */
+}
+
+#explore-button:hover {
+  background-color: #e4245d;
+}
+
+#body-text-content {
+  font-weight: 500;
+  color: #6d1f37;
+}
+
+#body-title-content {
+  font-weight: bolder;
+  color: #6d1f37;
+}
+
+/* cookie style */
+
+.round-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #6d1f37;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+#rotatedIcon {
+  display: none;
+  transform: rotate(45deg);
+}
+
+#cookieButton.open {
+  transform: rotate(45deg);
+}
+
+#cookieButton.open #normalIcon {
+  display: none;
+}
+
+#cookieButton.open #rotatedIcon {
+  display: block;
+}
+
+#cookieDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+
+.accept-button {
+  background-color: #6d1f37;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+@media (max-width: 576px) {
+  .round-button {
+    bottom: 20px;
+    left: 20px;
+  }}
+/* 
+///////////////////////////////////////////////////////////// */
