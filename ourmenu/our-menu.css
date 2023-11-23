@@ -1,0 +1,103 @@
+.navbar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent ;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: larger;
+}
+/* navbar for food and drinks  */
+.navbar-food {
+  background-color: #b51144 !important;
+  padding: 10px ;
+}
+
+.navbar-food-row {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 40%;
+}
+
+.navbar-food-item {
+  margin-right: 30px;
+}
+
+.navbar-food-link {
+  text-decoration: none;
+  color: white !important;
+  font-size: 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.active {
+  text-decoration: underline;
+}
+#main-container{
+  background-image: url(/ourmenu/assets/wavy-background.png);
+}
+#drinks-container{
+  background-image: url(/ourmenu/assets/wavy-background.png);
+}
+.food-menu-item {
+  background-color:white;
+  display: flex; /* Uncomment this to enable flex layout */
+  width: 60%;
+  margin: auto; /* Centers the container */
+  padding: 20px; /* Add padding as needed */
+}
+
+.food-item-image {
+  width: 90%;
+  /*  Adjust the image width as needed */
+  /* margin-right: 20px; Add spacing between image and text/ */
+}
+
+.food-menu-item .col-md-6 {
+  flex: 1; /* Equal flex distribution for left and right containers */
+}
+
+
+.drinks-menu-item {
+  background-color:white;
+  display: flex; /* Uncomment this to enable flex layout */
+  width: 60%;
+  margin: auto; /* Centers the container */
+  padding: 20px; /* Add padding as needed */
+}
+
+.drinks-item-image {
+  width: 90%;
+  /*  Adjust the image width as needed */
+  /* margin-right: 20px; Add spacing between image and text/ */
+}
+
+.drinks-menu-item .col-md-6 {
+  flex: 1; /* Equal flex distribution for left and right containers */
+}
+h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #6d1f37;
+}
+
+
+/* BODY CONTAINER */
+ 
+.nav-a:hover {
+  font-weight: bold;
+  font-size: larger;
+  color: black !important;
+}
+ 
+.header-container{
+  background-image: url(/ourmenu/assets/menubackground.jpg);
+  height: 300px;
+}
+.header-container h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  font-size:xx-large;
+}
