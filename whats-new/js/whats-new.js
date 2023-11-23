@@ -1,15 +1,15 @@
 async function fetchData() {
   try {
-    const response = await fetch("https://mocki.io/v1/4184605b-d22d-4273-9026-09037f0fb475");
+    const response = await fetch("https://mocki.io/v1/3dd71866-f214-4e09-962c-693fd10de931");
     const data = await response.json();
     console.log(data);
     const users = data;
 
     for (let i = 1; i < 4; i++) {
-      const ran = Math.floor(Math.random() * 1);
+      const ran = Math.floor(Math.random() * 2);
       const offerContainer = document.getElementById(`offer${i}`);
       const img1 = document.createElement("img");
-      img1.src = users[0].image;
+      img1.src = users[2].image;
       img1.className = "images";
       offerContainer.appendChild(img1);
     }
