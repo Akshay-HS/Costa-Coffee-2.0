@@ -32,20 +32,20 @@ topContainer.appendChild(Containerdiv);
 //website and link
 async function fetchData() {
   try {
-    const response = await fetch("https://dummyjson.com/users/");
+    const response = await fetch("https://mocki.io/v1/9b412821-ed29-4428-accb-fcd9157ade70");
     const data = await response.json();
     console.log(data);
 
-    const users = data.users;
+    const users = data;
     const websiteContainer = document.getElementById("imgContainer");
     const websiteContainer1 = document.getElementById("imgContainer1");
 
     const websiteimg = document.createElement("img");
-    websiteimg.src = users[0].image;
+    websiteimg.src = users[0].img;
     websiteContainer.appendChild(websiteimg);
 
     const websiteimg1 = document.createElement("img");
-    websiteimg1.src = users[1].image;
+    websiteimg1.src = users[1].img;
     websiteContainer1.appendChild(websiteimg1);
   } catch (error) {
     console.error("Error fetching data: ", error);

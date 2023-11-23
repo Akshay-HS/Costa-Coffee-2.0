@@ -89,12 +89,39 @@ body {
 .description{
     font-weight: 600;
 }
+
+#WebContainer{
+  margin-top:5%;
+  margin-bottom:5%; 
+  padding-bottom:7%;
+  padding-top:2%;
+  background-color: #ffffff;
+}
+
 #websiteContainer,#websiteContainer1{
     margin-left: 60px;
     display:flex;
+    margin-top:40px;
 }
-#nameAndLink,#nameAndLink1{
-    margin-top:70px;
+#imgContainer img {
+  width: 167%;
+  height: 100%;
+  padding-left: 20%;
+  border-bottom: 1px solid #ddd;
+}
+#imgContainer1 img{
+  width: 130%;
+  height: 100%;
+  padding-left: 14%;
+  border-bottom: 1px solid #ddd;
+}
+#nameAndLink{
+    margin-top:10%;
+    margin-left:20%;
+}
+#nameAndLink1{
+  margin-top:5%;
+  margin-left:15%;
 }
 #nameAndLink h2,a{
     color:#6d1f37;
@@ -125,42 +152,65 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.reviewFormContainer{
- text-align:center;
- padding:60px 70px;
- background-color:rgb(234, 237, 233);
- color:#38101c
+
+.reviewFormContainer {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 80px rgb(1, 1, 1);
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbzS-7Rdfy9_uZzjtn6BT1qyt1Kef6KXVUpA&usqp=CAU");
+  max-width: 400px;
+  
+  margin: 0 auto;
+  margin-bottom:10%;
+}
+
+.reviewFormContainer h1 {
+  text-align: center;
+  font-family:cursive;
+  color :#ce2f4a;
+ 
 }
 
 form {
-  max-width: 400px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-left:auto;
-  margin-right:auto;
-  background-color:rgb(238, 240, 237); 
+  text-align: left;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
+  color: #333;
 }
 
-input[type="text"],
-input[type="number"],
+input,
 textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
+
 button {
-  padding: 10px 20px;
-  background-color: #4c1b09;
-  color: white;
-  border-radius: 20px;
+  background-color: #ce2f4a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  margin-left:40%;
 }
+
+button:hover {
+  background-color: rgb(224, 117, 88);
+}
+
+
+
 
 
 
