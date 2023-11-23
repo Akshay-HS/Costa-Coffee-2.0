@@ -119,7 +119,21 @@ fetchData()
   .catch((error) => {
     console.error(error.message);
   });
+function createDirectionButton() {
+  var directionButton = document.createElement("button");
+  directionButton.classList.add("direction-button");
+  directionButton.innerHTML =
+    '<img src="../Store_Locator_Page/assets/directions.png" alt="Get Directions">';
+  directionButton.addEventListener("click", function () {
+    // Get the latitude and longitude of the selected store
+    var selectedLatitude = parseFloat(this.getAttribute("data-latitude"));
+    var selectedLongitude = parseFloat(this.getAttribute("data-longitude"));
 
+    // Open Google Maps with directions
+    openGoogleMapsDirections(selectedLatitude, selectedLongitude);
+  });
+  return directionButton;
+}
 // Make showstoredetails asynchronous
 async function showstoredetails(
   namepass,
@@ -131,6 +145,14 @@ async function showstoredetails(
   // Clear existing content
   document.querySelector(".stores").innerHTML = "";
 
+  // Create container for store details and directions
+  const parentContainer = document.createElement("div");
+  parentContainer.className = "store-details-parent-container";
+
+  // Create container for store details
+  const detailsContainer = document.createElement("div");
+  detailsContainer.className = "store-details-container";
+
   // Create elements for store details
   const name = document.createElement("h2");
   const location = document.createElement("p");
@@ -141,11 +163,10 @@ async function showstoredetails(
   location.textContent = locationpass;
   distance.textContent = distancepass;
 
-  // Add store details to DOM
-  const storesContainer = document.querySelector(".stores");
-  storesContainer.appendChild(name);
-  storesContainer.appendChild(location);
-  storesContainer.appendChild(distance);
+  // Add store details to container
+  detailsContainer.appendChild(name);
+  detailsContainer.appendChild(location);
+  detailsContainer.appendChild(distance);
 
   // Fetch manager details based on the store name
   const managerDetails = await getManagerDetails(namepass);
@@ -169,24 +190,8 @@ async function showstoredetails(
   managerDiv.appendChild(managerNumber);
   managerDiv.appendChild(managerEmail);
 
-  // Add manager div to the DOM
-  storesContainer.appendChild(managerDiv);
-
-  // Create a div for manager image
-  const managerImageDiv = document.createElement("div");
-  managerImageDiv.className = "manager-image";
-
-  // Create an image element for the manager's image
-  const managerImage = document.createElement("img");
-  managerImage.src = managerDetails.image_url;
-  managerImage.alt = "Manager's Image";
-  console.log(managerDetails.image_url);
-
-  // Add manager's image to the manager image div
-  managerImageDiv.appendChild(managerImage);
-
-  // Add manager image div to the DOM
-  storesContainer.appendChild(managerImageDiv);
+  // Add manager div to the container
+  detailsContainer.appendChild(managerDiv);
 
   // Create a div for the newsletter subscription form
   const newsletterDiv = document.createElement("div");
@@ -210,7 +215,7 @@ async function showstoredetails(
   subscribeButton.addEventListener("click", function () {
     // Validate email format
     const email = emailInput.value;
-    const selectedStoreName = storesContainer.querySelector("h2").textContent;
+    const selectedStoreName = detailsContainer.querySelector("h2").textContent;
     if (validateEmail(email)) {
       saveSubscription(email, selectedStoreName);
       alert(`Successfully subscribed with email: ${email}`);
@@ -224,13 +229,40 @@ async function showstoredetails(
   newsletterDiv.appendChild(emailInput);
   newsletterDiv.appendChild(subscribeButton);
 
-  // Add newsletter div to the DOM
-  storesContainer.appendChild(newsletterDiv);
+  // Add newsletter div to the container
+  detailsContainer.appendChild(newsletterDiv);
 
-  // Update map
+  // Add the store details container to the parent container
+  parentContainer.appendChild(detailsContainer);
+
+  // Create a div for the directions button
+  const directionsContainer = document.createElement("div");
+  directionsContainer.className = "directions-container";
+  const directionButton = createDirectionButton();
+  directionButton.setAttribute("data-latitude", latitudepass);
+  directionButton.setAttribute("data-longitude", longitudepass);
+
+  // Add the direction button to its container
+  directionsContainer.appendChild(directionButton);
+
+  // Add the directions container to the parent container
+  parentContainer.appendChild(directionsContainer);
+
+  // Add the parent container to the DOM
+  const storesContainer = document.querySelector(".stores");
+  storesContainer.appendChild(parentContainer);
+
+  // Update map view to the selected store location
   map.panTo([latitudepass, longitudepass]);
 }
 
+function openGoogleMapsDirections(latitude, longitude) {
+  // Construct the Google Maps URL with the destination coordinates
+  var mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+
+  // Open the URL in a new tab or window
+  window.open(mapsUrl, "_blank");
+}
 // Function to fetch manager details based on store name
 async function getManagerDetails(storeName) {
   const apiUrl = "https://mocki.io/v1/14902a7e-106f-4162-b39c-fdb132d286f6";
@@ -308,8 +340,6 @@ function sendSubscriptionToGoogleAppsScript(email, store) {
     });
 }
 
-// ...
-
 // Event listener for when the DOM content is loaded (again)
 document.addEventListener("DOMContentLoaded", function () {
   // Get DOM elements for filter button and filter form
@@ -339,6 +369,43 @@ document.addEventListener("DOMContentLoaded", function () {
       searchStores(selectedFilterType);
     });
 });
+document.getElementById("search-input").addEventListener("input", function () {
+  var searchInput = document.getElementById("search-input").value.toLowerCase();
+  console.log(searchInput);
+  searchStores(searchInput);
+});
+// Function to filter and display stores based on keyword
+function searchStores(keyword) {
+  var storesContainer = document.querySelector(".stores");
+  var storeItems = storesContainer.getElementsByClassName("store-item");
+  var noResultsMessage = document.querySelector(".no-results");
+
+  // Hide all store items and the no results message
+  for (var i = 0; i < storeItems.length; i++) {
+    storeItems[i].style.display = "none";
+  }
+  noResultsMessage.style.display = "none";
+
+  // Display matching store items or show no results message
+  var resultsFound = false;
+  for (var i = 0; i < storeItems.length; i++) {
+    var storeName = storeItems[i].querySelector("h2").textContent.toLowerCase();
+    var storeLocation = storeItems[i]
+      .querySelector("p")
+      .textContent.toLowerCase();
+
+    if (storeName.includes(keyword) || storeLocation.includes(keyword)) {
+      storeItems[i].style.display = "block";
+      resultsFound = true;
+    }
+  }
+
+  // If no results found, display the no results message
+  if (!resultsFound) {
+    noResultsMessage.style.display = "block";
+  }
+}
+
 function Locateme() {
   if ("geolocation" in navigator) {
     // Request the user's current location
