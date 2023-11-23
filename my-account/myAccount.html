@@ -121,7 +121,18 @@
         </div>
       </div>
     </div>
-
+    <div id="apiDetails" class="container mt-5">
+      <div class="card mb-3" style="width: 18rem;">
+        <img id="cardImage" src="" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 id="cardTitle" class="card-title"></h5>
+          <p id="cardCategory" class="card-text"></p>
+          <p id="cardPrice" class="card-text"></p>
+          <p id="cardDescription" class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    
     <!-- your script tags remain unchanged -->
 
     <!-- Bootstrap JS and Firebase JS SDK -->
@@ -129,49 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Firebase JS SDK -->
-
-    <script>
-      // Function to handle image upload
-      function handleImageUpload() {
-        const imageInput = document.getElementById("imageInput");
-        imageInput.click();
-
-        imageInput.addEventListener("change", function (event) {
-          const selectedFile = event.target.files[0];
-          const selectedImage = document.getElementById("selectedImage");
-          const defaultImageSrc = "assets/images/accountprofile.png"; // Default image source
-
-          if (selectedFile) {
-            selectedImage.style.display = "block";
-
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-              selectedImage.src = e.target.result;
-            };
-
-            reader.readAsDataURL(selectedFile);
-          } else {
-            // No file selected, show default image
-            selectedImage.style.display = "block";
-            selectedImage.src = defaultImageSrc;
-          }
-        });
-      }
-
-      // Fetch user data when the page loads
-      window.addEventListener("DOMContentLoaded", (event) => {
-        const selectedImage = document.getElementById("selectedImage");
-        const defaultImageSrc = "assets/images/accountprofile.png"; // Default image source
-
-        // Set the default image source and display it
-        selectedImage.src = defaultImageSrc;
-        selectedImage.style.display = "block";
-      });
-      function logout() {
-        window.location.href = "../loginAndSignup/loginAndSignup.html";
-      }
-    </script>
     <script src="js/myAccountFirebase.js" type="module"></script>
+    <script src="js/myAccount.js"></script>
   </body>
 </html>
