@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="customcoffee.css" />
+    <title>Coffee Maker Menu</title>
+  </head>
+  <body>
+    <form>
+      <label for="coffee-bean">Select Coffee Bean Type:</label>
+      <select id="coffee-bean" name="coffee-bean">
+        <option value="light">Light Roast</option>
+        <option value="medium">Medium Roast</option>
+        <option value="dark">Dark Roast</option>
+      </select>
+
+      <label for="sweetener">Select Sweetener:</label>
+      <select id="sweetener" name="sweetener">
+        <option value="honey">Honey</option>
+        <option value="sugar">Sugar</option>
+        <option value="stevia">Stevia</option>
+      </select>
+
+      <label for="milk">Do you want Milk? :</label>
+      <label for="milk">Yes</label>
+      <input type="checkbox" id="milk" name="milk" value="with" />
+
+      <!-- <label for="water">Water:</label> -->
+      <label for="water">No</label>
+      <input type="checkbox" id="water" name="water" value="with" />
+
+      <button type="submit">Make My Coffee</button>
+    </form>
+  </body>
+</html>
