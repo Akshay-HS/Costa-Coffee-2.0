@@ -1,13 +1,13 @@
 body {
     background-color: white;
-    background-image: url(/order-online/assets/wavy-background\ 1.png);
+    background-image: url(../assets/wavy-background\ 1.png);
     display: cover;
     height: 90px;
     width: 100%;
   }
 /* topcontainer which contain order online and discription */
 #topContainer {
-    background-image: url(/order-online/assets/order-online.jpg);
+    background-image: url(../assets/order-online.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

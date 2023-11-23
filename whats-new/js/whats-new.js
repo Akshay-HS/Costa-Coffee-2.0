@@ -6,10 +6,10 @@ async function fetchData() {
     const users = data;
 
     for (let i = 1; i < 4; i++) {
-      const ran = Math.floor(Math.random() * 2);
+      const ran = Math.floor(Math.random() * 3);
       const offerContainer = document.getElementById(`offer${i}`);
       const img1 = document.createElement("img");
-      img1.src = users[2].image;
+      img1.src = users[ran].image;
       img1.className = "images";
       offerContainer.appendChild(img1);
     }
