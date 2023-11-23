@@ -1,0 +1,530 @@
+.navbar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent !important;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* Set a higher z-index */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#container {
+  margin-top: 7vh;
+}
+.left-column {
+  height: 80vh; /* Adjust the height as needed */
+  background-color: rgb(138, 93, 101);
+}
+
+.top-div {
+  margin-top: 56px; /* Adjust based on navbar height */
+}
+
+#mainDiv {
+  padding-left: 0%;
+  padding-right: 0%;
+  /* margin-top: 30%; */
+}
+
+.left-column-content {
+  margin-top: 20%; /* Adjust the margin top as needed */
+}
+
+.right-column {
+  background-size: cover; /* This will make the background image cover the entire div */
+  background-position: center; /* Center the background image within the div */
+}
+.left-div img,
+.right-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+.image-container {
+  width: 100%;
+  height: 300px; /* Set the desired height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-div,
+.right-div {
+  height: 100px;
+}
+/* footer */
+/* foooter */
+
+.footer-productinfo {
+  margin-top: 5vh;
+  font-size: large;
+  height: 65vh;
+  background-color: #b51144;
+  /* display: flex; */
+  /* margin-top: 500px; */
+}
+.footer-costacoffee {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  /* font-size: x-large; */
+  /* margin-left: 40px; */
+  /* margin-top: 40px; */
+  font-weight: 500;
+}
+.footer-costacoffee a {
+  text-decoration: none;
+  color: #ffffff;
+  /* padding-bottom: 5px; */
+  /* font-size: x-large; */
+}
+.footer-dietary-information {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  /* font-size: x-large; */
+  /* margin-left: 80px;
+  margin-top: 40px; */
+  font-weight: 500;
+}
+.footer-dietary-information a {
+  text-decoration: none;
+  color: #ffffff;
+  /* padding-bottom: 5px; */
+  /* font-size: x-large; */
+}
+.footer-behindthebeans {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  /* font-size: x-large; */
+  /* margin-left: 80px;
+  margin-top: 40px; */
+  font-weight: 500;
+}
+.footer-behindthebeans a {
+  text-decoration: none;
+  color: #ffffff;
+  /* padding-bottom: 5px; */
+  /* font-size: x-large; */
+}
+footer {
+  /* display: flex; */
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  /* height: 275px; */
+  background-color: #6d1f37;
+  font-family: "Costa Text Regular", sans-serif;
+  font-size: large;
+  flex-flow: wrap;
+  max-width: 1392px;
+  /* margin: 0px auto;
+  padding-left: 50px;
+  padding-top: 50px; */
+}
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer ul {
+  list-style-type: none;
+  /* left: 0; */
+}
+.social-list {
+  display: flex;
+  /* padding: 0; */
+}
+.facebook-icon {
+  height: 30px;
+  margin-right: 20px;
+}
+.insta-icon {
+  height: 30px;
+  margin-right: 20px;
+}
+.nav-a:hover {
+  font-weight: bold;
+  font-size: larger;
+  color: black !important;
+}
+
+.second-div {
+  background-color: rgb(188, 7, 7) !important;
+}
+/* Specific styling for the second navbar */
+.second-div .navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-div .navbar-nav .nav-item {
+  margin-right: 20px; /* Adjust the spacing between items as needed */
+}
+
+.second-div .nav-item:last-child {
+  margin-right: 0; /* Remove margin-right for the last item */
+}
+
+.second-div .nav-link:hover {
+  color: black; /* Change text color to black on hover */
+}
+
+/* Fix for the burger option not working (needs Bootstrap JS) */
+/* ... (Bootstrap JS should be correctly linked in the HTML) */
+
+/* cookie style */
+
+.round-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #6d1f37;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+#rotatedIcon {
+  display: none;
+  transform: rotate(45deg);
+}
+
+#cookieButton.open {
+  transform: rotate(45deg);
+}
+
+#cookieButton.open #normalIcon {
+  display: none;
+}
+
+#cookieButton.open #rotatedIcon {
+  display: block;
+}
+
+#cookieDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+
+.accept-button {
+  background-color: #6d1f37;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Nutrition adn well being */
+/* Style of Nutrition and well being */
+
+#nutrition-h1 {
+  text-align: center;
+  color: #6d1f37;
+  /* margin-top: %; */
+}
+
+#nutrition-p1 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%; */
+  margin-top: 4%;
+}
+#nutrition-p2 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%; */
+  margin-top: 4%;
+}
+#nutrition-img1 {
+  height: 500px;
+  /* margin-bottom: 20px; */
+  /* margin-top: -100px; */
+  width: 100%;
+}
+#nutrition-p3 {
+  font-size: larger;
+  font-weight: 600;
+  width: 53%;
+  /* margin-left: 24%; */
+  /* margin-top: -150px; */
+  color: orange;
+  /* margin-bottom: 50px; */
+}
+#nutrition-h2 {
+  /* margin-left: 24%; */
+  color: #6d1f37;
+}
+#nutrition-p4 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%; */
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+#nutrition-div1 {
+  display: flex;
+  /* margin-top: 150px; */
+  /* margin-left: 100px; */
+  margin-bottom: 100px;
+}
+#nutrition-img2 {
+  flex: 1;
+  width: 240px;
+  height: 200px;
+  /* margin-bottom: 200px; */
+}
+#nutrition-div2 {
+  flex: 2;
+  /* margin-left: 0px; */
+  width: 40%;
+  padding-left: 40px;
+}
+#nutrition-h3 {
+  color: #6d1f37;
+  font-weight: 700;
+}
+#nutrition-a1 {
+  color: #6d1f37;
+  font-weight: 700;
+}
+
+/*  */
+/*  */
+#costa-foundation-button1 {
+  /* margin-bottom: 36px; */
+  background-color: #6d1f37;
+  border: none;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 150px;
+  height: 50px;
+  /* margin-top: 4%;
+  margin-left: 20%; */
+}
+#costa-foundation-h1 {
+  color: #6d1f37;
+  font-weight: 800;
+  /* margin-left: 24%;
+  margin-top: 40%; */
+}
+#costa-foundation-button2 {
+  margin-bottom: 36px;
+  background-color: #6d1f37;
+  border: none;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 150px;
+  height: 50px;
+  margin-top: 7%;
+  /* margin-left: 25%; */
+}
+#donation-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+
+#my-dialog {
+  position: fixed;
+  background-color: #fff;
+  width: 70vh;
+  padding: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+  border: none;
+  color: #6d1f37;
+}
+
+#th-dialog {
+  position: fixed;
+  background-color: #fff;
+  width: 70vh;
+  padding: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+  border: none;
+  color: #6d1f37;
+  backdrop-filter: blur(10px);
+}
+#foundation-img1 {
+  width: 30%;
+  height: 30%;
+  /* margin-left: 55%; */
+}
+#foundation-p1 {
+  font-weight: 500;
+  width: 80%;
+  /* margin-top: 0px;
+  margin-left: 10%; */
+}
+#foundation-p2 {
+  font-weight: 500;
+  width: 70%;
+  /* margin-top: -150px; */
+  margin-left: 10%;
+}
+#responsible-h1 {
+  color: #6d1f37;
+  font-weight: 800;
+  /* margin-left: 24%;
+  margin-top: 10%; */
+}
+#responsible-h2 {
+  color: #6d1f37;
+  font-weight: 800;
+  /* margin-left: 24%; */
+  /* margin-top: 40%; */
+}
+#responsible-p5 {
+  font-size: large;
+  width: 52%;
+  font-weight: 400;
+  /* margin-left: 24%;
+  margin-top: 4%;
+  padding-bottom: 5%; */
+}
+#responsible-div-h {
+  color: #6d1f37;
+  /* margin-top: 70px; */
+}
+#responsible-div-p {
+  color: #6d1f37;
+  width: 470px;
+  /* margin-left: 80px;
+  margin-top: 70px; */
+}
+.responsible-main-div {
+  display: flex;
+  /* margin-top: 500px;
+  height: 400px; */
+}
+.responsible-left-div {
+  justify-content: space-around;
+  flex: 1;
+  background-color: rgb(176, 221, 245);
+}
+.responsible-right-div {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Make COffee */
+#make-coffee {
+  background: linear-gradient(rgb(255, 165, 167), rgb(134, 87, 88));
+  margin-bottom: 50px;
+  height: 900px;
+  width: 50%;
+  padding-top: 30px;
+  margin-left: 26%;
+  border-radius: 10%;
+  padding-bottom: 20px;
+  box-shadow: 5px 5px 5px;
+}
+
+#make-head {
+  color: #6d1f37;
+  text-align: center;
+}
+.coffee-options {
+  margin: 20px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  text-align: center;
+  border-radius: 10%;
+}
+
+label,
+select,
+input {
+  display: block;
+  padding: 5px;
+  margin: 5px auto;
+  border-radius: 10%;
+}
+
+.price {
+  margin: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  margin-left: 35%;
+  padding: 20px;
+  border-radius: 20%;
+  box-shadow: 5px 5px 5px;
+}
+#foundation-globe {
+  height: 500px;
+  margin-top: -50px;
+  width: 100%;
+}
+.foundation-main-div {
+  display: flex;
+  margin-top: 250px;
+  height: 500px;
+}
+.foundation-left-div {
+  flex: 1;
+  text-align: center;
+  flex: 1;
+  background-color: rgb(176, 221, 245);
+}
+.foundation-right-div {
+  flex: 1;
+  overflow: hidden;
+}
