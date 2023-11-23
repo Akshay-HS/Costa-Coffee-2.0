@@ -48,17 +48,13 @@ async function fetchImage() {
     return null;
   }
 }
-// mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+// creating the body
 async function createDynamicBody(rowCount) {
   const whole_body_container = document.querySelector(".whole-body-container");
   const body_container = document.createElement("div");
   body_container.classList.add("container-fluid", "py-4");
 
   for (let i = 1; i <= rowCount; i++) {
-    // var blank_space_div = document.createElement("div");
-    // blank_space_div.classList.add("row", "py-3");
-    // body_container.appendChild(blank_space_div);
-
     const row = document.createElement("div");
     row.classList.add("row", "py-4");
 
@@ -137,7 +133,6 @@ async function createDynamicBody(rowCount) {
     row.appendChild(colContent);
     body_container.appendChild(row);
   }
-  // body_container.appendChild(blank_space_div);
   whole_body_container.appendChild(body_container);
 }
 
