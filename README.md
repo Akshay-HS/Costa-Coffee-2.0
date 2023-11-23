@@ -1,4 +1,2 @@
-
-# Costa-Coffee-2.0
+# Costa-Coffee
 Costa Coffee Website clone
-
