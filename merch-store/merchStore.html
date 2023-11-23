@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Merch store</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="merchStore.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light p-0 m-0 mt-0 pt-0">
+      <div id="top" class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav p-sm-1">
+            <li class="nav-item mr-3 ml-3">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="assets/images/costa-coffee-logo.png"
+                  alt="Costa Coffee Logo"
+                  height="60"
+                />
+              </a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="#">Our Story</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="#">Our Menu</a>
+            </li>
+
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="#">Order Online</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a
+                class="nav-link"
+                href="../behind-the-beans/behind-the-beans.html"
+                >Behind the Beans</a
+              >
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="#">Store Locator</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="#">What's New</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="../my-account/myAccount.html"
+                >My Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="product">
+      <div id="apiDetails" class="container">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                id="cardImage"
+                src=""
+                class="card-img-top"
+                alt="Product Image"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 id="cardTitle" class="card-title"></h5>
+                <p id="cardCategory" class="card-text"></p>
+                <p id="cardPrice" class="card-text"></p>
+                <p id="cardDescription" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- your script tags remain unchanged -->
+
+    <!-- Bootstrap JS and Firebase JS SDK -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Firebase JS SDK -->
+
+    <script src="js/merchStore.js"></script>
+  </body>
+</html>
