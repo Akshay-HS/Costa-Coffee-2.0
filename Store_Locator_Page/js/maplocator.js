@@ -389,7 +389,7 @@ function searchStores(keyword) {
   // Display matching store items or show no results message
   var resultsFound = false;
   for (var i = 0; i < storeItems.length; i++) {
-    var storeName = storeItems[i].querySelector("h2").textContent.toLowerCase();
+    var storeName = storeItems[i].querySelector("h4").textContent.toLowerCase();
     var storeLocation = storeItems[i]
       .querySelector("p")
       .textContent.toLowerCase();
