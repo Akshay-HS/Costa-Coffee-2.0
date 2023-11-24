@@ -1,22 +1,32 @@
-
-/* navbar for food and drinks  */
 .navbar {
-  background-color: #b51144;
-  padding: 20px ;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent ;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: larger;
+}
+/* navbar for food and drinks  */
+.navbar-food {
+  background-color: #b51144 !important;
+  padding: 10px ;
 }
 
-.navbar-row {
+.navbar-food-row {
   list-style: none;
   display: flex;
   margin: 0;
   padding-left: 40%;
 }
 
-.nav-item {
+.navbar-food-item {
   margin-right: 30px;
 }
 
-.nav-link {
+.navbar-food-link {
   text-decoration: none;
   color: white !important;
   font-size: 30px;
@@ -27,10 +37,10 @@
   text-decoration: underline;
 }
 #main-container{
-  background-image: url(/assets/wavy-background.png);
+  background-image: url(/ourmenu/assets/wavy-background.png);
 }
 #drinks-container{
-  background-image: url(/assets/wavy-background.png);
+  background-image: url(/ourmenu/assets/wavy-background.png);
 }
 .food-menu-item {
   background-color:white;
@@ -73,131 +83,21 @@ h2{
   color: #6d1f37;
 }
 
-.px-custom {
-  padding-left: 90px; /* Adjust the value to your desired padding */
-  padding-right: 90px; /* Adjust the value to your desired padding */
-}
+
 /* BODY CONTAINER */
  
-.blank-space-div {
-  background-color: white;
-  display: cover;
-  height: 90px;
-  width: 100%;
-}
- 
-#explore-button {
-  padding: 18px 27px;
-  font-size: 18px;
-  font-weight: bolder;
-  line-height: 28px;
-  background-color: #6D1F37;
-  color: white;
-  border: none;
-  border-radius: 32px;
-  transition: all 0.3s ease;
-  /* width: 320px; */
-}
- 
-#explore-button:hover {
-  background-color: #e4245d;
-}
-
-
-
-.footer-productinfo {
-  margin-top: 5vh;
-  font-size: large;
-  height: 65vh;
-  background-color: #b51144;
-  /* display: flex; */
-  /* margin-top: 500px; */
-}
-.footer-costacoffee {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #ffffff;
-  /* font-size: x-large; */
-  /* margin-left: 40px; */
-  /* margin-top: 40px; */
-  font-weight: 500;
-}
-.footer-costacoffee a {
-  text-decoration: none;
-  color: #ffffff;
-  /* padding-bottom: 5px; */
-  /* font-size: x-large; */
-}
-.footer-dietary-information {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #ffffff;
-  /* font-size: x-large; */
-  /* margin-left: 80px;
-  margin-top: 40px; */
-  font-weight: 500;
-}
-.footer-dietary-information a {
-  text-decoration: none;
-  color: #ffffff;
-  /* padding-bottom: 5px; */
-  /* font-size: x-large; */
-}
-.footer-behindthebeans {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #ffffff;
-  /* font-size: x-large; */
-  /* margin-left: 80px;
-  margin-top: 40px; */
-  font-weight: 500;
-}
-.footer-behindthebeans a {
-  text-decoration: none;
-  color: #ffffff;
-  /* padding-bottom: 5px; */
-  /* font-size: x-large; */
-}
-footer {
-  /* display: flex; */
-  color: rgb(255, 255, 255);
-  bottom: 0;
-  /* height: 275px; */
-  background-color: #6d1f37;
-  font-family: "Costa Text Regular", sans-serif;
-  font-size: large;
-  flex-flow: wrap;
-  max-width: 1392px;
-  /* margin: 0px auto;
-  padding-left: 50px;
-  padding-top: 50px; */
-}
-footer a {
-  text-decoration: none;
-  color: #ffffff;
-}
-footer ul {
-  list-style-type: none;
-  /* left: 0; */
-}
-.social-list {
-  display: flex;
-  /* padding: 0; */
-}
-.facebook-icon {
-  height: 30px;
-  margin-right: 20px;
-}
-.insta-icon {
-  height: 30px;
-  margin-right: 20px;
-}
 .nav-a:hover {
   font-weight: bold;
   font-size: larger;
   color: black !important;
 }
  
+.header-container{
+  background-image: url(/ourmenu/assets/menubackground.jpg);
+  height: 300px;
+}
+.header-container h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  font-size:xx-large;
+}

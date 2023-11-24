@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../home/style/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid p-0 m-0 mt-2 pt-0">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark navbar-light p-0 m-0 mt-0 pt-0"
+      >
+        <div id="top" class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav p-sm-1">
+              <li class="nav-item ml-3">
+                <a class="navbar-brand" href="#">
+                  <img
+                    src="../home/assets/costa-coffee-logo.png"
+                    alt="Costa Coffee Logo"
+                    height="80"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Menu</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Order Online</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../behind-the-beans/behind-the-beans.html"
+                  >Behind the Beans</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Store Locator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">What's New!</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../my-account/myAccount.html"
+                  >My Account</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Video Section -->
+    <div class="container-fluid p-0 video-div">
+      <div class="video-container">
+        <div class="col-12 p-0" id="video-container">
+          <video width="100%" height="auto" autoplay loop muted>
+            <source src="../home/assets/bannerV3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Body -->
+    <div class="whole-body-container"></div>
+
+    <!-- Cookie -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div id="cookieButton" class="round-button">
+            <div id="normalIcon" class="icon">🍪</div>
+            <div id="rotatedIcon" class="icon">❌</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div id="cookieDialog" class="cookie-dialog">
+            <h1>Cookie Consent</h1>
+            <p>We use cookies to improve your experience on our website.</p>
+            <button id="acceptButton" class="accept-button">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <section class="footer-productinfo py-5 information-footer">
+      <div class="container">
+        <div class="row ms-md-3">
+          <div class="col-md-3">
+            <h5 class="mb-5 footer-text-heading">Costa Coffee</h5>
+            <div class="d-flex flex-column">
+              <a href="#" class="footer-text-content mb-2">Our coffees</a>
+              <a href="#" class="footer-text-content mb-2">Help and advice</a>
+              <a href="#" class="footer-text-content mb-2">Costa Club</a>
+              <a href="#" class="footer-text-content mb-2">How to guides</a>
+              <a href="#" class="footer-text-content mb-2">FAQs</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="mb-5 footer-text-heading">Dietary Information</h5>
+            <div class="d-flex flex-column">
+              <a href="#" class="footer-text-content mb-2"
+                >Detailed dietary information</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="mb-5 footer-text-heading">Behind the beans</h5>
+            <div class="d-flex flex-column">
+              <a href="#" class="footer-text-content mb-2">Behind the Beans</a>
+              <a href="#" class="footer-text-content mb-2">Costa Foundation</a>
+              <a href="#" class="footer-text-content mb-2"
+                >Responsible sourcing</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-5 links-footer">
+      <div class="container">
+        <div class="row ms-md-3">
+          <div
+            class="col-md-6 order-md-1 order-2 text-md-start text-center mb-3 mb-md-0"
+          >
+            <a href="#" class="links-footer-text-content"
+              >Policies and terms of use</a
+            >
+            <p class="links-footer-text-content mt-3">
+              © 2023 Costa Coffee. All rights reserved.
+            </p>
+            <ul
+              class="list-inline social-list justify-content-md-end justify-content-center"
+            >
+              <li class="list-inline-item me-3 me-md-0 mb-3 mb-md-0">
+                <a
+                  href="https://www.facebook.com/Costa-Coffee-%C3%96sterreich-110726417922322/"
+                  class="text-white"
+                >
+                  <img
+                    src="https://images.ctfassets.net/27hc2gu70btq/2iIP38op14DbdRhkJLoPNf/8b6d1847cf089e5fc70160c32fca4c22/facebook.svg"
+                    alt="Costa Coffee Facebook"
+                    class="facebook-icon img-fluid"
+                    width="60%"
+                  />
+                </a>
+              </li>
+              <li class="list-inline-item me-3 me-md-0 mb-3 mb-md-0">
+                <a
+                  href="https://www.instagram.com/costacoffeeindia/?hl=en"
+                  class="text-white"
+                >
+                  <img
+                    src="https://images.ctfassets.net/27hc2gu70btq/5UXzVzRq89VGA3cbidkkX0/9c01113e991a4728bedfd07aba5907af/instagram.svg"
+                    alt="Costa Coffee Instagram"
+                    class="insta-icon img-fluid"
+                  />
+                </a>
+              </li>
+              <li class="list-inline-item me-3 me-md-0 mb-3 mb-md-0">
+                <a href="https://twitter.com/CostaCoffeeInd" class="text-white">
+                  <img
+                    src="https://images.ctfassets.net/27hc2gu70btq/7vOx07c0sEUaDeGsMF26Wz/8a720c59ff98fdbd97411107c288c546/twitter.png"
+                    alt="Twitter"
+                    class="twitter-icon img-fluid"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../home/js/index.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../home/js/cookie.js"></script>
+</html>
