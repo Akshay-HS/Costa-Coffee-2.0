@@ -78,7 +78,7 @@ const login = () => {
       // alert("Login successful!");
       // You can perform actions after successful login, e.g., redirect to another page
       console.log("User logged in:", user);
-      window.location.href = "../my-account/myAccount.html";
+      window.location.href = "../home/index.html";
     })
     .catch((error) => {
       // Handle errors during login
@@ -104,7 +104,7 @@ const googleLogin = () => {
       // The signed-in user info.
       const user = result.user;
       // IdP data available using getAdditionalUserInfo(result)
-      window.location.href = "../my-account/myAccount.html";
+      window.location.href = "../home/index.html";
       // ...
     })
     .catch((error) => {
@@ -125,7 +125,7 @@ document
 const anonLogin = () => {
   signInAnonymously(auth)
     .then(() => {
-      window.location.href = "../my-account/myAccount.html";
+      window.location.href = "../home/index.html";
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -167,7 +167,7 @@ function submitPhoneNumberAuthCode() {
       //console.log(user);
 
       // window.AppInventor.setWebViewString(JSON.stringify(user));
-      window.location.href = "../my-account/myAccount.html";
+      window.location.href = "../home/index.html";
     })
     .catch(function (error) {
       console.log(error);
