@@ -61,11 +61,11 @@ fetch("https://fakestoreapi.com/products/1")
     console.log("Error fetching API data:", error);
   });
 
-// Get the button element
-const merchStoreButton = document.getElementById("merchStoreButton");
+// // Get the button element
+// const merchStoreButton = document.getElementById("merchStoreButton");
 
-// Add a click event listener to the button
-merchStoreButton.addEventListener("click", function () {
-  // Redirect to another.html
-  window.location.href = "../merch-Store/merchStore.html";
-});
+// // Add a click event listener to the button
+// merchStoreButton.addEventListener("click", function () {
+//   // Redirect to another.html
+//   window.location.href = "../merch-Store/merchStore.html";
+// });
