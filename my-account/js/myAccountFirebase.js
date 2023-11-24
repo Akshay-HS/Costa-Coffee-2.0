@@ -32,7 +32,7 @@ function fetchUserData() {
       // User is signed in
       const { email } = user;
       const name = extractNameFromEmail(email);
-      document.getElementById("name").value = name || "";
+      document.getElementById("name").value = name || email || "Anon";
       document.getElementById("email").value = email || "";
     } else {
       // No user is signed in
