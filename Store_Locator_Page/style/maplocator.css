@@ -50,7 +50,7 @@ body {
 .search {
   width: 30%;
   flex: 0.5;
-  background-image: url(/Store_Locator_Page/assets/bg.jpg);
+  background-image: url(../assets/bg.jpg);
 }
 .map {
   flex: 1;
@@ -174,6 +174,13 @@ body {
   overflow: hidden;
   border-radius: 30%;
 }
+.direction-button img {
+  width: 20px;
+}
+.direction-button:hover {
+  cursor: pointer;
+}
+
 .manager-image img {
   width: 250px;
 }
@@ -206,8 +213,11 @@ body {
   padding-left: 20px;
   font-family: "Costa Text Regular", sans-serif;
 }
-.stores h2 {
+.stores h4 {
   font-size: x-large;
+}
+.stores h2 {
+  font-size: xx-large;
 }
 .stores h3 {
   font-size: large;
@@ -219,6 +229,32 @@ body {
 .store-item:hover {
   cursor: pointer;
   background-color: rgb(251, 240, 240);
+}
+.store-details-parent-container {
+  display: flex;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.newsletter-form {
+  margin-bottom: 10px;
+}
+
+.directions-container button {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  position: absolute;
+  margin-left: -140px;
+  margin-top: 17px;
+  border: none;
+  background-color: #6d1f37;
+}
+.directions-container button img {
+  width: 35px;
 }
 
 .locatemebutton {
@@ -400,7 +436,7 @@ footer ul {
   font-size: 125%;
 }
 .subscribe-input {
-  width: 220px;
+  width: 370px;
   height: 40px;
   border-radius: 50px;
   border: 1px solid #6d1f37; /* Border color */
@@ -416,7 +452,7 @@ footer ul {
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
-  margin-left: 15px;
+  margin-left: 130px;
   font-size: 70%;
 }
 .subscribe-input::placeholder {
