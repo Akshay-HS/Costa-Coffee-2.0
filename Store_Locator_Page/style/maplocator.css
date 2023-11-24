@@ -177,6 +177,10 @@ body {
 .direction-button img {
   width: 20px;
 }
+.direction-button:hover {
+  cursor: pointer;
+}
+
 .manager-image img {
   width: 250px;
 }
@@ -209,8 +213,11 @@ body {
   padding-left: 20px;
   font-family: "Costa Text Regular", sans-serif;
 }
-.stores h2 {
+.stores h4 {
   font-size: x-large;
+}
+.stores h2 {
+  font-size: xx-large;
 }
 .stores h3 {
   font-size: large;

@@ -84,7 +84,7 @@ fetchData()
       var storescontainer = document.querySelector(".stores");
       var storescontainerdiv = document.createElement("div");
       storescontainerdiv.className = "store-item";
-      var name = document.createElement("h2");
+      var name = document.createElement("h4");
       var location = document.createElement("p");
       var distance = document.createElement("p");
       var breakline = document.createElement("hr");
