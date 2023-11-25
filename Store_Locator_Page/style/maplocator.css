@@ -60,7 +60,20 @@ body {
 .toggle-search-class button:hover {
   background-color: #b30000;
 }
-
+#search-button {
+  border: none;
+  background-color: #6d1f37;
+  color: #fff;
+  padding: 10px 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+#search-button:hover {
+  background-color: #b30000;
+}
 .filtersearch {
   display: flex;
   margin-top: 25px;
@@ -81,26 +94,6 @@ body {
   margin-top: 2px;
   margin-right: -10px;
   height: 30px;
-}
-
-#search-input {
-  width: 230px;
-  height: 50px;
-  border-radius: 50%;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 1px solid gray;
-  text-align: center;
-}
-.no-results {
-  display: none;
-  color: #6d1f37;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
-  margin-right: 40px;
 }
 .filtersearch-input {
   margin-left: 20px;
@@ -150,35 +143,44 @@ body {
 .filter-form button:hover {
   background-color: #b30000;
 }
-.manager-image {
-  width: 250px;
-  height: 170px;
-  overflow: hidden;
-  border-radius: 30%;
+#search-input {
+  width: 230px;
+  height: 50px;
+  border-radius: 50%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid gray;
+  text-align: center;
 }
+.no-results {
+  display: none;
+  color: #6d1f37;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
 .direction-button img {
   width: 20px;
 }
 .direction-button:hover {
   cursor: pointer;
 }
-
-.manager-image img {
-  width: 250px;
-}
-#search-button {
+.directions-container button {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  position: absolute;
+  margin-left: -140px;
+  margin-top: 17px;
   border: none;
   background-color: #6d1f37;
-  color: #fff;
-  padding: 10px 20px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  cursor: pointer;
 }
-#search-button:hover {
-  background-color: #b30000;
+.directions-container button img {
+  width: 35px;
 }
 #map-section {
   position: relative;
@@ -194,17 +196,17 @@ body {
   padding-left: 20px;
   font-family: "Costa Text Regular", sans-serif;
 }
-.stores h4 {
-  font-size: x-large;
-  font-weight: 600;
-  margin-top: 20px;
-}
 .stores h2 {
   font-size: xx-large;
   margin-top: 20px;
 }
 .stores h3 {
   font-size: large;
+}
+.stores h4 {
+  font-size: x-large;
+  font-weight: 600;
+  margin-top: 20px;
 }
 .stores hr {
   width: 350px;
@@ -225,20 +227,6 @@ body {
 }
 .newsletter-form {
   margin-bottom: 10px;
-}
-
-.directions-container button {
-  width: 80px;
-  height: 80px;
-  border-radius: 30%;
-  position: absolute;
-  margin-left: -140px;
-  margin-top: 17px;
-  border: none;
-  background-color: #6d1f37;
-}
-.directions-container button img {
-  width: 35px;
 }
 
 .locatemebutton {
