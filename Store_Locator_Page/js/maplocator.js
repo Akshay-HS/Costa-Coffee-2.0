@@ -17,12 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isSearchVisible) {
       // Hide the search section
       searchSection.style.display = "none";
-      mapSection.style.flex = 9.5; // Expand the map to full width
     } else {
       // Show the search section
       searchSection.style.display = "block";
-      mapSection.style.flex = 1;
-      mapSection.style.width = "1080px";
     }
     isSearchVisible = !isSearchVisible;
   });
@@ -286,8 +283,6 @@ function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
-
-// ...
 
 function saveSubscription(email, store) {
   // Check if localStorage is supported
