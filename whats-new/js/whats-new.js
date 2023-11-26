@@ -33,6 +33,9 @@ function fetchDatas() {
     });
 }
 fetchDatas();
+
+// cookie
+
 document.addEventListener("DOMContentLoaded", function () {
     const cookieButton = document.getElementById("cookieButton");
     const acceptButton = document.getElementById("acceptButton");
