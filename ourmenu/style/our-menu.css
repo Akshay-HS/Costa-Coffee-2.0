@@ -137,3 +137,64 @@ h2{
   font-size:xx-large;
 }
 
+.round-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #6d1f37;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+#rotatedIcon {
+  display: none;
+  transform: rotate(45deg);
+}
+
+#cookieButton.open {
+  transform: rotate(45deg);
+}
+
+#cookieButton.open #normalIcon {
+  display: none;
+}
+
+#cookieButton.open #rotatedIcon {
+  display: block;
+}
+
+#cookieDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+}
+
+.accept-button {
+  background-color: #6d1f37;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
