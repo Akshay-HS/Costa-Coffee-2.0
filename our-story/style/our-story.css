@@ -51,6 +51,7 @@ body {
 }
 
 /* inside navbar */
+
 .our-story-navbar {
   background-color: rgb(181, 17, 68);
   /* width: 100%; */
@@ -111,7 +112,17 @@ body {
   font-weight: bolder;
   color: #6d1f37;
 }
+/* NEW DIVISION */
+p.coffeeFact-text {
+  color: #b73058;
+  font-size: 30px;
+  font-weight: bolder;
+}
 
+#coffee-logo-img {
+  height: 300px;
+  width: 200px;
+}
 /* cookie style */
 
 .round-button {
