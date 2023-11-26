@@ -18,11 +18,10 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 function extractNameFromEmail(email) {
-  const atIndex = email.indexOf("@");
-  if (atIndex !== -1) {
-    return email.substring(0, atIndex);
+  if (email && email.indexOf("@") !== -1) {
+    return email.substring(0, email.indexOf("@"));
   }
-  return ""; // Return an empty string if '@' is not found
+  return ""; // Return an empty string if email is null or '@' is not found
 }
 
 // Function to fetch user data from Firebase Authentication
@@ -30,14 +29,24 @@ function fetchUserData() {
   auth.onAuthStateChanged((user) => {
     if (user) {
       // User is signed in
-      const { email } = user;
-      const name = extractNameFromEmail(email);
-      document.getElementById("name").value = name || email || "Anon";
-      document.getElementById("email").value = email || "";
+      const { email, phoneNumber } = user;
+      let name = extractNameFromEmail(email);
+
+      if (!name) {
+        // If name is empty, show "Anonymous"
+        name = "Anonymous";
+      }
+
+      // If phoneNumber exists, replace email with phoneNumber
+      const displayEmail = phoneNumber ? phoneNumber : email;
+
+      document.getElementById("name").value = name || "";
+      document.getElementById("email").value = displayEmail || "None";
     } else {
       // No user is signed in
       console.log("No user signed in.");
     }
   });
 }
+
 window.onload = fetchUserData;
