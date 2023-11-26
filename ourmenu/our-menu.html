@@ -9,8 +9,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="our-menu.css" />
-    <script src="our-menu.js"></script>
+    <link rel="stylesheet" href="/ourmenu/style/our-menu.css" />
+    <script src="/ourmenu/js/our-menu.js"></script>
     <title>Our Menu</title>
   </head>
   <body>
@@ -44,14 +44,18 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Our Story</a>
+                <a class="nav-link" href="../our-story/our-story.html"
+                  >Our Story</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Our Menu</a>
+                <a class="nav-link" href="../ourmenu/our-menu.html">Our Menu</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Order Online</a>
+                <a class="nav-link" href="../order-online/order-online.html"
+                  >Order Online</a
+                >
               </li>
               <li class="nav-item">
                 <a
@@ -61,10 +65,16 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Store Locator</a>
+                <a
+                  class="nav-link"
+                  href="../Store_Locator_Page/store-locator.html"
+                  >Store Locator</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../">What's New!</a>
+                <a class="nav-link" href="../whats-new/whats-new.html"
+                  >What's New!</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../my-account/myAccount.html"
@@ -80,7 +90,7 @@
     <!-- photo -->
     <div class="our-story-image-container col-12"></div>
 
-    <!-- navbar for food and drinks -->
+    <!-- navbar for food and drinks starts here -->
     <nav class="navbar navbar-food">
       <div class="container navbar-container">
         <ul
@@ -100,7 +110,16 @@
     <div id="main-container"></div>
     <div id="drinks-container"></div>
 
-    <!-- footer -->
+    <!-- cookie -->
+    <div id="cookieButton" class="round-button">
+      <div id="normalIcon" class="icon">🍪</div>
+      <div id="rotatedIcon" class="icon">❌</div>
+    </div>
+    <div id="cookieDialog" class="cookie-dialog">
+      <h1>Cookie Consent</h1>
+      <p>We use cookies to improve your experience on our website.</p>
+      <button id="acceptButton" class="accept-button">Accept</button>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

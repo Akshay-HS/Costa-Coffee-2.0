@@ -1,28 +1,5 @@
-var pleasingColorList = [
-  "#9c89b8",
-  "#f0a6ca",
-  "#efc3e6",
-  "#f0e6ef",
-  "#b8bedd",
-  "#d8e2dc",
-  "#ef476f",
-  "#f78c6b",
-  "#ffd166",
-  "#83d483",
-  "#06d6a0",
-  "#0cb0a9",
-  "#118ab2",
- 
-  "#C47449",
-  "#FF7F83",
-  "#A94717",
-  "#DDA9CD",
-  "#B0DDF5",
-  "#CFA8CA",
-  "#EE7D80",
-  "#EFA021",
-];
- 
+
+document.addEventListener("DOMContentLoaded", function () {
 
  
 async function fetchImage() {
@@ -53,7 +30,7 @@ async function createTopImage() {
   top_image_container.appendChild(top_image);
 }
 createTopImage()
-document.addEventListener("DOMContentLoaded", function () {
+
     const drinksLink = document.querySelector('.navbar-row a[href="#drinks"]');
     drinksLink.addEventListener("click", function (event) {
       toggleActive(drinksLink);
@@ -267,24 +244,54 @@ rowCounter++;
          
          drinksContainer2.appendChild(row2);
          rowCounter++;
-           }
-         
-         
-       }
-         )
-         const customCoffeeButton = document.createElement('button');
-         customCoffeeButton.textContent = 'Create your own coffee';
-         
-         // Add a click event listener to the customCoffeeButton
-         customCoffeeButton.addEventListener('click', function() {
-             // Redirect to index.html
-             window.location.href = 'custom-coffee.html';            
-         });
-         drinksMainContainer.appendChild(customCoffeeButton);
         }
-    
+
+        // Create the "Create your own coffee" button
+        const customCoffeeButton = document.createElement('button');
+        customCoffeeButton.textContent = 'Do you want to make your own coffee?';
+        customCoffeeButton.addEventListener('click', function() {
+            window.location.href = 'custom-coffee.html';
+        });
+
+        // Append the button to the drinksMainContainer
+        drinksMainContainer.appendChild(customCoffeeButton);
+    });
+}    
  //Code to print the drinks in the menu ends
 
+
+  const cookieButton = document.getElementById("cookieButton");
+  const acceptButton = document.getElementById("acceptButton");
+  const cookieDialog = document.getElementById("cookieDialog");
+
+  // Function to toggle the button state and show/hide the dialog
+  function toggleButtonState() {
+    if (cookieButton.classList.contains("open")) {
+      closeCookieDialog();
+    } else {
+      openCookieDialog();
+    }
+  }
+
+  // Function to open the cookie dialog
+  function openCookieDialog() {
+    cookieDialog.style.display = "block";
+    cookieButton.classList.add("open");
+  }
+
+  // Function to close the cookie dialog
+  function closeCookieDialog() {
+    cookieDialog.style.display = "none";
+    cookieButton.classList.remove("open");
+  }
+
+  // Function to handle the "Accept" button click
+  acceptButton.addEventListener("click", function () {
+    closeCookieDialog();
+  });
+
+  // Add a click event handler to the cookie button
+  cookieButton.addEventListener("click", toggleButtonState);
 
 
     });
