@@ -55,7 +55,7 @@ async function fetchData() {
 fetchData();
 
 
-  // js for form posting into excel
+  // js for cookie
   document.addEventListener("DOMContentLoaded", function () {
     const cookieButton = document.getElementById("cookieButton");
     const acceptButton = document.getElementById("acceptButton");
