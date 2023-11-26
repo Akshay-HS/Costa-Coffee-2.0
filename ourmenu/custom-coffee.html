@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="customcoffee.css" />
-    <title>Coffee Maker Menu</title>
+    <link rel="stylesheet" href="/ourmenu/customcoffee.css" />
+    <title>Custom Coffee</title>
   </head>
   <body>
-    <form>
+    <form id="coffeeForm" name="coffeeForm">
       <label for="coffee-bean">Select Coffee Bean Type:</label>
       <select id="coffee-bean" name="coffee-bean">
         <option value="light">Light Roast</option>
@@ -23,14 +23,24 @@
       </select>
 
       <label for="milk">Do you want Milk? :</label>
-      <label for="milk">Yes</label>
-      <input type="checkbox" id="milk" name="milk" value="with" />
+      <select id="milk" name="milk">
+        <option value="with">Yes</option>
+        <option value="without">No</option>
+      </select>
 
-      <!-- <label for="water">Water:</label> -->
-      <label for="water">No</label>
-      <input type="checkbox" id="water" name="water" value="with" />
+      <label for="remarks">Any Remarks:</label>
+      <input
+        type="text"
+        id="remarks"
+        name="remarks"
+        placeholder="Enter remarks here"
+      />
 
-      <button type="submit">Make My Coffee</button>
+      <button type="submit" onclick="submitForm()">Make My Coffee</button>
     </form>
+
+    
+
+    <script src="/ourmenu/customcoffee.js"></script>
   </body>
 </html>

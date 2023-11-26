@@ -1,11 +1,45 @@
-.navbar {
+
+
+/* TOP IMAGE */
+.our-story-image-container {
+  width: 100%;
   position: relative;
+}
+ 
+#our-story-top-img {
+  width: 100%;
+  height: auto;
+}
+ 
+/* NAV BAR */
+.navbar {
   z-index: 1;
   width: 100%;
-  background-color: transparent ;
+  background-color: transparent !important;
 }
-.navbar-light .navbar-nav .nav-link {
-  color: #fff;
+ 
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.navbar-nav {
+  margin-top: 2%;
+  margin-left: 3%;
+}
+.navbar .nav-link {
+  color: white !important;
+}
+ 
+.nav-item {
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: 100%;
+}
+ 
+.navbar-nav {
   font-weight: bold;
   font-size: larger;
 }
@@ -19,7 +53,8 @@
   list-style: none;
   display: flex;
   margin: 0;
-  padding-left: 40%;
+  width: 100%;
+  
 }
 
 .navbar-food-item {
@@ -100,4 +135,48 @@ h2{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: black;
   font-size:xx-large;
+}
+
+/* footer starts here  */
+.footer-productinfo h5 {
+  font-size: 1.5rem; /* Adjust font size */
+}
+ 
+.footer-productinfo a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #ffffff; /* Set text color for links */
+  font-size: 1.2rem; /* Adjust font size for links */
+}
+ 
+/* Container-specific styles */
+ 
+.information-footer {
+  background-color: #b51144;
+}
+.links-footer {
+  background-color: #6d1f37;
+}
+ 
+.footer-text-content {
+  font-size: 23px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+.footer-text-content:hover {
+  color: wheat;
+}
+ 
+.footer-text-heading {
+  color: white;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.links-footer-text-content {
+  font-size: larger;
+  text-decoration: none;
+  color: white;
+}
+.footer1{
+  bottom:0%;
 }
