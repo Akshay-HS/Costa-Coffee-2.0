@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Store_Locator_Page/style/maplocator.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -19,38 +17,72 @@
   </head>
   <body>
     <div id="nav-bar">
-      <ul id="nav-list">
-        <li id="nav-li-1">
-          <a href="index.html">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../home/index.html">
             <img
               src="../Store_Locator_Page/assets/costa-coffee-logo.png"
               alt="costa-coffee-logo"
-          /></a>
-        </li>
-        <li class="nav-li">
-          <a href="/Costa-Coffee-2.0/ourmenu/">Our Story</a>
-        </li>
-        <li class="nav-li">
-          <a href="/Costa-Coffee-2.0/ourmenu/our-menu.html">Our menu</a>
-        </li>
-        <li class="nav-li">
-          <a href="../order-online/order-online.html">Order Online</a>
-        </li>
-        <li class="nav-li">
-          <a href="../behind-the-beans/behind-the-beans.html"
-            >Behind the Beans</a
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-        </li>
-        <li class="nav-li">
-          <a href="../Store_Locator_Page/store-locator.html" class="active"
-            >Store Locator</a
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
           >
-        </li>
-        <li class="nav-li">
-          <a href="../whats-new/whats-new.html">What's New!</a>
-        </li>
-        <li class="nav-li"><a href="">My Account</a></li>
-      </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../our-story/our-story.html"
+                  >Our Story</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ourmenu/our-menu.html">Our menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../order-online/order-online.html"
+                  >Order Online</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../behind-the-beans/behind-the-beans.html"
+                  >Behind the Beans</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  href="../Store_Locator_Page/store-locator.html"
+                  >Store Locator</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../whats-new/whats-new.html"
+                  >What's New!</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../my-account/myAccount.html"
+                  >My Account</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
     <div class="mapsearch">
       <div class="search">
@@ -76,7 +108,7 @@
           <form class="filter-form" style="display: none">
             <label for="filter-type">Select Filter Type:</label>
             <select id="filter-type" name="filter-type">
-              z
+              <option value="" selected disabled>Select</option>
               <option value="drive">Drive</option>
               <option value="avenue">Avenue</option>
               <option value="street">Street</option>
@@ -94,9 +126,7 @@
         </div>
         <div class="locateme">
           <button class="locatemebutton" onclick="Locateme()">
-            <img
-              src="/Costa-Coffee-2.0/Store_Locator_Page/assets/locateme.png"
-            />
+            <img src="../Store_Locator_Page/assets/locateme.png" />
           </button>
         </div>
         <div class="map" id="map-section"></div>
@@ -115,76 +145,77 @@
   <section class="footer-productinfo">
     <div class="footer-costacoffee">
       <h5>Costa Coffee</h5>
-      <a href="">Our coffees</a>
-      <a href="">Help and advice</a>
-      <a href="">Costa Club</a>
-      <a href="">How to guides</a>
-      <a href="">FAQs</a>
+      <a href="#">Our Coffees</a>
+      <a href="#">Help and Advice</a>
+      <a href="#">Costa Club</a>
+      <a href="#">How-to Guides</a>
+      <a href="#">FAQs</a>
     </div>
     <div class="footer-dietary-information">
       <h5>Costa Coffee</h5>
-      <a href="">Detailed dietary information</a>
+      <a href="#">Detailed Dietary Information</a>
     </div>
     <div class="footer-behindthebeans">
-      <h5>Behind the beans</h5>
-      <a href="">Behind the Beans</a>
-      <a href="">Costa Foundation</a>
-      <a href="">Responsible sourcing</a>
+      <h5>Behind the Beans</h5>
+      <a href="#">Behind the Beans</a>
+      <a href="#">Costa Foundation</a>
+      <a href="#">Responsible Sourcing</a>
     </div>
   </section>
-  <footer>
-    <div class="footer-list">
-      <a href="">Policies and terms of use</a>
-      <p>© 2023 Costa Coffee. All rights reserved.</p>
-    </div>
-    <div class="footer-icons">
-      <ul class="social-list">
-        <li>
-          <a
-            href="https://www.facebook.com/Costa-Coffee-%C3%96sterreich-110726417922322/"
-            class="facebook-link"
-          >
-            <img
-              src="https://images.ctfassets.net/27hc2gu70btq/2iIP38op14DbdRhkJLoPNf/8b6d1847cf089e5fc70160c32fca4c22/facebook.svg"
-              alt="Costa Coffee Facebook"
-              class="facebook-icon"
-            />
-          </a>
-        </li>
-        <li class="insta-link">
-          <a href="https://www.instagram.com/costacoffeeindia/?hl=en" class="">
-            <img
-              src="https://images.ctfassets.net/27hc2gu70btq/5UXzVzRq89VGA3cbidkkX0/9c01113e991a4728bedfd07aba5907af/instagram.svg"
-              alt="Costa Coffee Instagram"
-              class="insta-icon"
-            />
-          </a>
-        </li>
-        <li class="twitter-link">
-          <a href="https://twitter.com/CostaCoffeeInd" class="">
-            <img
-              src="https://images.ctfassets.net/27hc2gu70btq/7vOx07c0sEUaDeGsMF26Wz/8a720c59ff98fdbd97411107c288c546/twitter.png"
-              alt="Twitter"
-              class="twitter-icon"
-            />
-          </a>
-        </li>
-      </ul>
+
+  <footer class="text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="footer-list">
+            <a href="#">Policies and Terms of Use</a>
+            <p>© 2023 Costa Coffee. All rights reserved.</p>
+          </div>
+        </div>
+        <div class="footer-icons text-end">
+          <ul class="social-list">
+            <li>
+              <a
+                href="https://www.facebook.com/Costa-Coffee-%C3%96sterreich-110726417922322/"
+                class="facebook-link"
+              >
+                <img
+                  src="https://images.ctfassets.net/27hc2gu70btq/2iIP38op14DbdRhkJLoPNf/8b6d1847cf089e5fc70160c32fca4c22/facebook.svg"
+                  alt="Costa Coffee Facebook"
+                  class="facebook-icon"
+                />
+              </a>
+            </li>
+            <li class="insta-link">
+              <a
+                href="https://www.instagram.com/costacoffeeindia/?hl=en"
+                class=""
+              >
+                <img
+                  src="https://images.ctfassets.net/27hc2gu70btq/5UXzVzRq89VGA3cbidkkX0/9c01113e991a4728bedfd07aba5907af/instagram.svg"
+                  alt="Costa Coffee Instagram"
+                  class="insta-icon"
+                />
+              </a>
+            </li>
+            <li class="twitter-link">
+              <a href="https://twitter.com/CostaCoffeeInd" class="">
+                <img
+                  src="https://images.ctfassets.net/27hc2gu70btq/7vOx07c0sEUaDeGsMF26Wz/8a720c59ff98fdbd97411107c288c546/twitter.png"
+                  alt="Twitter"
+                  class="twitter-icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
+
   <script src="../Store_Locator_Page/js/maplocator.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.2.0/exceljs.min.js"></script>
   <script src="https://apis.google.com/js/api.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-cKpR8LST7T5OJ6F0p4OV9EngI/tb2IqYbaXp5qY9daJtn8cFS0dG1QG5KM1fwuVx"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-eC2skFD55xR6ldA8xGVrKQc8QCnq8EEWW8lFkKTA7EKjrjsBXHAs3Q4WiZ1fStjE"
-    crossorigin="anonymous"
-  ></script>
   <script src="/Costa-Coffee-2.0/behind-the-beans/js/cookie.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

@@ -3,45 +3,28 @@ body {
   margin: 0;
   width: 100%;
 }
-#nav-bar {
-  display: flex;
-  position: relative;
-  padding-top: 20px;
-  z-index: 7;
-  width: 100%;
-  color: #fefdfd;
+#nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-li {
+  margin-right: 15px;
+}
+.navbar-custom .navbar-nav .nav-link {
+  color: white !important;
+  font-size: 20px; /* Adjust the font size as needed */
+}
+/* Background color red */
+.navbar-custom {
   background-color: #6d1f37;
 }
-#nav-bar li a {
-  text-decoration: none;
-  color: #ffffff;
+.navbar-brand img {
+  width: 280px;
 }
-#nav-bar img {
-  text-align: left;
-  width: 50%;
-  /* padding: 30px; */
+.active {
+  font-weight: 900;
 }
-#nav-li-1 {
-  margin-right: -200px;
-}
-
-#nav-list {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-}
-.nav-li {
-  margin-top: 20px;
-  padding: 10px;
-  color: white;
-  font-weight: 600;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
-}
-#nav-list a.active {
-  text-decoration: underline;
-}
-
 .mapsearch {
   height: 600px;
   width: 100%;
@@ -64,8 +47,6 @@ body {
   z-index: 100;
   top: 0;
   margin-top: 30px;
-  width: 40px;
-  height: 40px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   border-top-right-radius: 25px;
@@ -74,11 +55,25 @@ body {
   background-color: #6d1f37;
   font-size: xx-large;
   color: #ffffff;
+  padding-bottom: 10px;
 }
 .toggle-search-class button:hover {
   background-color: #b30000;
 }
-
+#search-button {
+  border: none;
+  background-color: #6d1f37;
+  color: #fff;
+  padding: 10px 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+#search-button:hover {
+  background-color: #b30000;
+}
 .filtersearch {
   display: flex;
   margin-top: 25px;
@@ -99,26 +94,6 @@ body {
   margin-top: 2px;
   margin-right: -10px;
   height: 30px;
-}
-
-#search-input {
-  width: 230px;
-  height: 50px;
-  border-radius: 50%;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 1px solid gray;
-  text-align: center;
-}
-.no-results {
-  display: none;
-  color: #6d1f37;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
-  margin-right: 40px;
 }
 .filtersearch-input {
   margin-left: 20px;
@@ -168,36 +143,44 @@ body {
 .filter-form button:hover {
   background-color: #b30000;
 }
-.manager-image {
-  width: 250px;
-  height: 170px;
-  overflow: hidden;
-  border-radius: 30%;
+#search-input {
+  width: 230px;
+  height: 50px;
+  border-radius: 50%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid gray;
+  text-align: center;
 }
+.no-results {
+  display: none;
+  color: #6d1f37;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
 .direction-button img {
   width: 20px;
 }
 .direction-button:hover {
   cursor: pointer;
 }
-
-.manager-image img {
-  width: 250px;
-}
-#search-button {
+.directions-container button {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  position: absolute;
+  margin-left: -140px;
+  margin-top: 17px;
   border: none;
-  height: 54px;
   background-color: #6d1f37;
-  color: #fff;
-  padding: 10px 20px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  cursor: pointer;
 }
-#search-button:hover {
-  background-color: #b30000;
+.directions-container button img {
+  width: 35px;
 }
 #map-section {
   position: relative;
@@ -213,14 +196,17 @@ body {
   padding-left: 20px;
   font-family: "Costa Text Regular", sans-serif;
 }
-.stores h4 {
-  font-size: x-large;
-}
 .stores h2 {
   font-size: xx-large;
+  margin-top: 20px;
 }
 .stores h3 {
   font-size: large;
+}
+.stores h4 {
+  font-size: x-large;
+  font-weight: 600;
+  margin-top: 20px;
 }
 .stores hr {
   width: 350px;
@@ -241,20 +227,6 @@ body {
 }
 .newsletter-form {
   margin-bottom: 10px;
-}
-
-.directions-container button {
-  width: 80px;
-  height: 80px;
-  border-radius: 30%;
-  position: absolute;
-  margin-left: -140px;
-  margin-top: 17px;
-  border: none;
-  background-color: #6d1f37;
-}
-.directions-container button img {
-  width: 35px;
 }
 
 .locatemebutton {
@@ -282,54 +254,54 @@ body {
   height: 350px;
   background-color: #b51144;
   display: flex;
+  padding-bottom: 20px;
+  font-weight: 400;
 }
 .footer-costacoffee {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: #ffffff;
-  font-size: xx-large;
   margin-left: 40px;
   margin-top: 40px;
-  font-weight: 500;
+  padding-right: 50px;
 }
 .footer-costacoffee a {
   text-decoration: none;
   color: #ffffff;
   padding-bottom: 5px;
-  font-size: x-large;
+  padding-bottom: 10px;
+  font-size: large;
 }
 .footer-dietary-information {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: #ffffff;
-  font-size: xx-large;
   margin-left: 80px;
   margin-top: 40px;
-  font-weight: 500;
+  padding-right: 50px;
 }
 .footer-dietary-information a {
   text-decoration: none;
   color: #ffffff;
   padding-bottom: 5px;
-  font-size: x-large;
+  padding-bottom: 10px;
+  font-size: large;
 }
 .footer-behindthebeans {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: #ffffff;
-  font-size: xx-large;
   margin-left: 80px;
   margin-top: 40px;
-  font-weight: 500;
 }
 .footer-behindthebeans a {
   text-decoration: none;
   color: #ffffff;
-  padding-bottom: 5px;
-  font-size: x-large;
+  padding-bottom: 10px;
+  font-size: large;
 }
 .round-button {
   position: fixed;
@@ -396,11 +368,10 @@ footer {
   color: rgb(255, 255, 255);
   bottom: 0;
   height: 275px;
-  background-color: #6d1f37;
+  background-color: #6d1f37 !important;
   font-family: sans-serif;
   font-size: large;
   flex-flow: wrap;
-  max-width: 1392px;
   margin: 0px auto;
   padding-left: 50px;
   padding-top: 50px;
