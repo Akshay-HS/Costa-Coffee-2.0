@@ -107,17 +107,21 @@
 
   #offerContainer{
     display:flex;
-    margin-left:20px;
+    margin-left:-3%;
     margin-right:0px;
     padding-bottom:100px;
     padding-left:130px;
   }
   .images{
-    margin-left:19px;
-    background-color: rgb(215, 163, 178);
+    /* background-color: rgb(215, 163, 178);  */
     height:286px;
+    padding-right:2%;
+    width:282px;
   }
-
+  img.images{
+    margin-left: 57px;
+  }
+ 
 
   /* footer */
 
