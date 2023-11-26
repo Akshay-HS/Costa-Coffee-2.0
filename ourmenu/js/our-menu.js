@@ -54,7 +54,7 @@ createTopImage()
    
  
     function reloadDIV() {
-      const main_container = document.getElementById("main-container");
+      const main_container = document.getElementById("food-container");
       const drink_container = document.getElementById("drinks-container");
       main_container.innerHTML = ""; // Clear the contents of maincontainer
       drink_container.innerHTML="";
@@ -63,7 +63,7 @@ createTopImage()
    
   //Code to print the food items in the menu ends
     function food() {
-     const mainContainer= document.getElementById("main-container");
+     const mainContainer= document.getElementById("food-container");
      mainContainer.innerHTML = ""; // Clear previous content
     console.log("food");
 
@@ -248,6 +248,7 @@ rowCounter++;
 
         // Create the "Create your own coffee" button
         const customCoffeeButton = document.createElement('button');
+        customCoffeeButton.id = 'customCoffeeButton';
         customCoffeeButton.textContent = 'Do you want to make your own coffee?';
         customCoffeeButton.addEventListener('click', function() {
             window.location.href = 'custom-coffee.html';
@@ -295,3 +296,5 @@ rowCounter++;
 
 
     });
+    
+    

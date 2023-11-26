@@ -71,7 +71,7 @@
 .active {
   text-decoration: underline;
 }
-#main-container{
+#food-container{
   background-image: url(/ourmenu/assets/wavy-background.png);
 }
 #drinks-container{
@@ -197,4 +197,10 @@ h2{
   padding: 10px 20px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+#customCoffeeButton{
+  background-color: bisque;
+  border-radius: 5px;
+  margin-left: 20%;
 }
