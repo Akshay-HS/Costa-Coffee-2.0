@@ -214,7 +214,7 @@ async function showstoredetails(
     const email = emailInput.value;
     const selectedStoreName = detailsContainer.querySelector("h2").textContent;
     if (validateEmail(email)) {
-      saveSubscription(email, selectedStoreName);
+      sendSubscriptionToGoogleAppsScript(email, selectedStoreName);
       alert(`Successfully subscribed with email: ${email}`);
     } else {
       alert("Invalid email format. Please enter a valid email address.");
@@ -284,27 +284,6 @@ function validateEmail(email) {
   return emailRegex.test(email);
 }
 
-function saveSubscription(email, store) {
-  // Check if localStorage is supported
-  if (typeof Storage !== "undefined") {
-    // Get existing subscriptions or initialize an empty array
-    const subscriptions =
-      JSON.parse(localStorage.getItem("subscriptions")) || [];
-
-    // Add the new subscription to the array
-    subscriptions.push({ email, store });
-
-    // Save the updated array back to localStorage
-    localStorage.setItem("subscriptions", JSON.stringify(subscriptions));
-
-    // Also, send the subscriptions to your Google Apps Script
-    sendSubscriptionToGoogleAppsScript(email, store);
-
-    console.log("Subscription saved successfully.");
-  } else {
-    console.error("LocalStorage is not supported in this browser.");
-  }
-}
 
 function sendSubscriptionToGoogleAppsScript(email, store) {
   // Create a FormData object to send data to the server
