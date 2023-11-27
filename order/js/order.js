@@ -93,7 +93,7 @@ async function populatePhotoBar() {
         var add_item_button = document.createElement("a");
         add_item_button.classList.add("btn", "align-self-center", "w-80");
         add_item_button.setAttribute("id", "add-item-button");
-        add_item_button.textContent = "Add item";
+        add_item_button.textContent = "favorite";
 
         add_item_button.addEventListener("click", async () => {
           const currentItem = item; // Assuming 'item' is defined somewhere in your logic
@@ -156,7 +156,7 @@ function show_cart() {
     // Create cart items container
     const cartTitle = document.createElement("p");
     cartTitle.classList.add("cart-title");
-    cartTitle.textContent = "Items on cart";
+    cartTitle.textContent = "Your Favorites";
     const cartItemsContainer = document.createElement("div");
     cartItemsContainer.id = "cart-items-container";
     cartItemsContainer.classList.add("photo-bar");
