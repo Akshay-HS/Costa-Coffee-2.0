@@ -109,7 +109,7 @@ async function createDynamicBody(rowCount) {
     const exploreButton = document.createElement("a");
     exploreButton.classList.add("btn", "align-self-center", "w-80");
     exploreButton.setAttribute("id", "explore-button");
-    exploreButton.href = "https://example.com/another-page.html";
+    exploreButton.href = "../order/order.html";
     exploreButton.textContent = "Explore the full menu ➤";
 
     const randomIndex = Math.floor(Math.random() * pleasingColorList.length);
