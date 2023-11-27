@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../home/style/index.css" />
+    <link rel="stylesheet" href="../order/style/order.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,6 +17,7 @@
     />
   </head>
   <body>
+    <!--------------------------------------- NAVBAR------------------------------------------------------------------------------- -->
     <div class="container-fluid p-0 m-0 mt-2 pt-0">
       <nav
         class="navbar navbar-expand-lg navbar-dark navbar-light p-0 m-0 mt-0 pt-0"
@@ -37,7 +38,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav p-sm-1">
               <li class="nav-item ml-3">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="../home/index.html">
                   <img
                     src="../home/assets/costa-coffee-logo.png"
                     alt="Costa Coffee Logo"
@@ -88,45 +89,42 @@
         </div>
       </nav>
     </div>
-    <!-- Video Section -->
-    <div class="container-fluid p-0 video-div">
-      <div class="video-container">
-        <div class="col-12 p-0" id="video-container">
-          <video width="100%" height="auto" autoplay loop muted>
-            <source src="../home/assets/bannerV3.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+    <!-- --------------------------------INSIDE------------------------------------------- -->
+    <div class="container-fluid order-items-navbar py-4">
+      <div class="row justify-content-center">
+        <!-- <div
+          class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-end text-md-center text-sm-center text-xs-center"
+        >
+          <a class="order-items-nav-li li-item-food" href="#our-story-history"
+            >Food</a
+          >
+        </div> -->
+        <!-- <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
+          <a
+            class="order-items-nav-li li-item-drinks"
+            href="#our-story-roastery"
+            >Drinks</a
+          >
+        </div> -->
+        <div
+          class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-md-center text-sm-center text-xs-center"
+        >
+          <a
+            class="order-items-nav-li li-item-our-coffee"
+            href="#our-story-ourCoffees"
+            >Our Coffees</a
+          >
         </div>
       </div>
     </div>
-
-    <!-- Dynamic Body -->
-    <div class="whole-body-container"></div>
-
-    <!-- Cookie -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="cookieButton" class="round-button">
-            <div id="normalIcon" class="icon">🍪</div>
-            <div id="rotatedIcon" class="icon">❌</div>
-          </div>
-        </div>
+    <!-- ----------------------------BODY-------------------------------------------- -->
+    <div class="body-container">
+      <div class="photo-bar" id="photoBar">
+        <!-- Photos and titles will be dynamically added here -->
       </div>
+      <button id="show-next-item-button" onclick="showNextItems()">Next</button>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div id="cookieDialog" class="cookie-dialog">
-            <h1>Cookie Consent</h1>
-            <p>We use cookies to improve your experience on our website.</p>
-            <button id="acceptButton" class="accept-button">Accept</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
+    <!-- ----------------------------FOOTER------------------------------------------ -->
     <section class="footer-productinfo py-5 information-footer">
       <div class="container">
         <div class="row ms-md-3">
@@ -217,12 +215,11 @@
       </div>
     </footer>
   </body>
-  <script src="../home/js/index.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../home/js/cookie.js"></script>
+  <script src="../order/js/order.js"></script>
 </html>
