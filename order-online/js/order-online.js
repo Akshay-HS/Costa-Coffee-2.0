@@ -55,7 +55,7 @@ async function fetchData() {
 fetchData();
 
 
-  // js for cookies
+  // js for cookie
   document.addEventListener("DOMContentLoaded", function () {
     const cookieButton = document.getElementById("cookieButton");
     const acceptButton = document.getElementById("acceptButton");
@@ -94,8 +94,8 @@ fetchData();
 
 
 
-  //form
-
+  
+// js for posting form into google sheet
   
   const scriptURL = "https://script.google.com/macros/s/AKfycbywDYy3n6UghCQ15DMRMaP1bvk7n4ufP32PF37BLSXdZ1igpW3wbK89zRn761niGsie/exec";
  
